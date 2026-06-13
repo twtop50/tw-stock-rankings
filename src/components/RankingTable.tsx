@@ -74,7 +74,7 @@ const COLUMNS: ColumnDef[] = [
   },
   { key: "dollarVolume", label: "成交金額", align: "right" },
   { key: "marketCap", label: "市值", align: "right", hideOnMobile: true },
-  { key: "theme", label: "題材/族群", align: "left" },
+  { key: "theme", label: "題材/族群", align: "left", hideOnMobile: true },
 ];
 
 function compare(a: StockRow, b: StockRow, key: SortKey, dir: SortDir): number {
@@ -248,6 +248,15 @@ export default function RankingTable() {
     return [...rows].sort((a, b) => compare(a, b, sortKey, sortDir));
   }, [rows, sortKey, sortDir]);
 
+  // 代碼 → 股名，供「今日發動題材」卡片標示是哪一檔（不只顯示代碼）。
+  const nameBySymbol = useMemo(() => {
+    const m: Record<string, string> = {};
+    rows.forEach((r) => {
+      m[r.symbol] = r.name;
+    });
+    return m;
+  }, [rows]);
+
   const showSkeleton = loading && rows.length === 0;
   const isLatest = history.length === 0 || selectedDate === history[0]?.date;
   const trendData: SymbolTrend | null = trendTarget
@@ -310,7 +319,7 @@ export default function RankingTable() {
       )}
       {!showSkeleton && (aiSource === "none" || themeSummary.length > 0) && (
         <CollapsibleSection title="🔥 今日發動題材">
-          <ThemeSummary items={themeSummary} aiSource={aiSource} />
+          <ThemeSummary items={themeSummary} aiSource={aiSource} names={nameBySymbol} />
         </CollapsibleSection>
       )}
 
@@ -397,8 +406,12 @@ export default function RankingTable() {
                             {row.market === "tpex" ? "櫃" : "市"}
                           </span>
                         </td>
-                        <td className="whitespace-nowrap px-3 py-2.5 text-slate-200">
-                          {row.name}
+                        <td className="px-3 py-2.5 text-slate-200">
+                          <span className="whitespace-nowrap">{row.name}</span>
+                          {/* 手機隱藏「題材」欄 → 改顯示於股名下方，節省橫向空間 */}
+                          <div className="mt-0.5 text-[10px] font-normal text-slate-500 sm:hidden">
+                            {row.theme || formatSector(row.sector)}
+                          </div>
                         </td>
                         <td className="hidden px-3 py-2.5 text-right font-mono text-slate-200 sm:table-cell">
                           {formatPrice(row.price)}

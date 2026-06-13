@@ -6,9 +6,10 @@ import type { ThemeSummaryItem } from "@/types/stock";
 interface Props {
   items: ThemeSummaryItem[];
   aiSource: "gemini" | "none";
+  names?: Record<string, string>; // 代碼 → 股名（顯示「6239 力成」而非只有代碼）
 }
 
-export default function ThemeSummary({ items, aiSource }: Props) {
+export default function ThemeSummary({ items, aiSource, names = {} }: Props) {
   if (aiSource === "none") {
     return (
       <div className="mb-4 rounded-lg border border-slate-800 bg-slate-900/40 px-4 py-3 text-sm text-slate-400">
@@ -46,9 +47,10 @@ export default function ThemeSummary({ items, aiSource }: Props) {
               {it.symbols.map((s) => (
                 <span
                   key={s}
-                  className="rounded bg-slate-800 px-1.5 py-0.5 font-mono text-[11px] text-slate-300"
+                  className="rounded bg-slate-800 px-1.5 py-0.5 text-[11px] text-slate-300"
                 >
-                  {s}
+                  <span className="font-mono text-slate-400">{s}</span>
+                  {names[s] && <span className="ml-1 text-slate-200">{names[s]}</span>}
                 </span>
               ))}
             </div>

@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import type { SortDir, SortKey } from "@/types/stock";
 
 interface Props {
@@ -10,7 +11,7 @@ interface Props {
   align?: "left" | "right";
   onSort: (key: SortKey) => void;
   className?: string;
-  hint?: string; // 有值時於標題旁顯示 ⓘ 並以 tooltip 說明
+  hint?: string; // 有值時於標題旁顯示 ⓘ；點一下展開說明（手機可用，非僅 hover）
 }
 
 export default function SortableHeader({
@@ -23,19 +24,19 @@ export default function SortableHeader({
   className = "",
   hint,
 }: Props) {
+  const [showHint, setShowHint] = useState(false);
   const isActive = activeKey === sortKey;
   const indicator = isActive ? (dir === "desc" ? "▼" : "▲") : "";
 
   return (
     <th
       scope="col"
-      title={hint}
-      className={`sticky top-0 z-10 bg-slate-900/95 px-3 py-2.5 text-xs font-semibold uppercase tracking-wider backdrop-blur ${
+      className={`sticky top-0 z-10 whitespace-nowrap bg-slate-900/95 px-3 py-2.5 text-xs font-semibold uppercase tracking-wider backdrop-blur ${
         align === "right" ? "text-right" : "text-left"
       } ${className}`}
     >
       <span
-        className={`inline-flex items-center gap-1 ${
+        className={`relative inline-flex items-center gap-1 ${
           align === "right" ? "flex-row-reverse" : ""
         }`}
       >
@@ -51,13 +52,30 @@ export default function SortableHeader({
           <span className="w-3 text-[10px]">{indicator}</span>
         </button>
         {hint && (
-          <span
-            title={hint}
-            aria-label={hint}
-            className="cursor-help text-[11px] font-normal normal-case text-slate-500 hover:text-slate-300"
-          >
-            ⓘ
-          </span>
+          <>
+            <button
+              type="button"
+              onClick={(e) => {
+                e.stopPropagation();
+                setShowHint((v) => !v);
+              }}
+              onBlur={() => setShowHint(false)}
+              aria-label={hint}
+              title={hint}
+              className="text-[11px] font-normal normal-case text-slate-500 hover:text-slate-300"
+            >
+              ⓘ
+            </button>
+            {showHint && (
+              <span
+                className={`absolute top-full z-30 mt-1 w-56 rounded-md border border-slate-700 bg-slate-900 px-3 py-2 text-[11px] font-normal normal-case leading-relaxed tracking-normal text-slate-300 shadow-xl ${
+                  align === "right" ? "right-0" : "left-0"
+                }`}
+              >
+                {hint}
+              </span>
+            )}
+          </>
         )}
       </span>
     </th>
