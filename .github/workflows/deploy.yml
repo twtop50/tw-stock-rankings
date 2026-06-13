@@ -1,0 +1,86 @@
+name: Snapshot & Deploy
+
+on:
+  # 台股 13:30 收盤後，行情約 14:00–15:00 公布。排兩道班次（台北 = UTC+8）：
+  #   15:30 台北（主要）、16:30 台北（備援）。週一～週五；假日抓到的是最近交易日，sameDay 守衛保證無害。
+  schedule:
+    - cron: "30 7 * * 1-5" # UTC 07:30 ≈ 台北 15:30（主要更新班）
+    - cron: "30 8 * * 1-5" # UTC 08:30 ≈ 台北 16:30（備援）
+  # 推送到主分支時也重新部署（程式變更）
+  push:
+    branches: [main]
+  # 允許在 Actions 頁面手動觸發
+  workflow_dispatch:
+
+permissions:
+  contents: write # 需可寫回 repo（commit 歷史快照）
+  pages: write
+  id-token: write
+
+# 同時間只跑一個部署
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      # 跨執行保留產業別/股數快取，減少基本資料 API 呼叫
+      - name: Restore industry metadata cache
+        uses: actions/cache@v4
+        with:
+          path: .cache
+          key: tw-industry-v1
+
+      # 產生 public/rankings.json（含 AI 題材分析）。
+      # 若資料來源暫時失敗，不中斷部署 —— 沿用已 commit 的上一份快照。
+      - name: Snapshot rankings
+        run: node scripts/snapshot.mjs || echo "::warning::snapshot 失敗，改用 repo 內既有 rankings.json 部署"
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+
+      - name: Setup Pages
+        id: pages
+        uses: actions/configure-pages@v5
+
+      # 用 Pages 自動推得的 base_path（專案站台為 /repo，使用者站台為空）
+      - name: Build static site
+        run: npm run build
+        env:
+          NEXT_PUBLIC_BASE_PATH: ${{ steps.pages.outputs.base_path }}
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: out
+
+      - name: Deploy to GitHub Pages
+        id: deploy
+        uses: actions/deploy-pages@v4
+
+      # 將快照與歷史寫回 repo，讓歷史能跨每日累積。[skip ci] 避免迴圈。
+      - name: Commit snapshot + history back to repo
+        if: github.ref == 'refs/heads/main'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add public/rankings.json public/history
+          if git diff --staged --quiet; then
+            echo "資料無變更，略過 commit。"
+          else
+            git commit -m "chore(data): 更新排行快照與歷史 [skip ci]"
+            git push
+          fi

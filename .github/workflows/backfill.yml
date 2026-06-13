@@ -1,0 +1,82 @@
+name: Backfill history
+
+# 一次性／偶爾手動執行：回補過去 N 個交易日的歷史快照（含 Gemini 題材），
+# 重建 index/trends，部署並 commit 回 repo。只在 Actions 分頁手動觸發。
+on:
+  workflow_dispatch:
+    inputs:
+      days:
+        description: "回補的交易日數"
+        required: false
+        default: "60"
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  backfill:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - name: Restore industry metadata cache
+        uses: actions/cache@v4
+        with:
+          path: .cache
+          key: tw-industry-v1
+
+      # 回補歷史（Gemini 在此可用 → 題材標籤品質較佳）。
+      - name: Backfill history
+        run: node scripts/backfill.mjs "${{ github.event.inputs.days }}"
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+
+      # 回補後把 streak 重接成連續鏈、同步 rankings.json（純離線）。
+      - name: Reconcile streak chain
+        run: node scripts/reconcile-streak.mjs
+
+      - name: Setup Pages
+        id: pages
+        uses: actions/configure-pages@v5
+
+      - name: Build static site
+        run: npm run build
+        env:
+          NEXT_PUBLIC_BASE_PATH: ${{ steps.pages.outputs.base_path }}
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: out
+
+      - name: Deploy to GitHub Pages
+        id: deploy
+        uses: actions/deploy-pages@v4
+
+      - name: Commit history back to repo
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add public/history public/rankings.json
+          if git diff --staged --quiet; then
+            echo "資料無變更，略過 commit。"
+          else
+            git commit -m "chore(data): 回補歷史快照 ${{ github.event.inputs.days }} 日 [skip ci]"
+            git push
+          fi
