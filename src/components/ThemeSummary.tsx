@@ -10,15 +10,17 @@ interface Props {
 }
 
 export default function ThemeSummary({ items, aiSource, names = {} }: Props) {
-  if (aiSource === "none") {
-    return (
-      <div className="mb-4 rounded-lg border border-slate-800 bg-slate-900/40 px-4 py-3 text-sm text-slate-400">
-        今日 AI 題材分析暫無，「題材／族群」欄改以產業別顯示。
-      </div>
-    );
+  // 有題材就顯示（不因 aiSource 標籤而隱藏實際資料）；完全沒有且未啟用 AI 才顯示提示。
+  if (items.length === 0) {
+    if (aiSource === "none") {
+      return (
+        <div className="mb-4 rounded-lg border border-slate-800 bg-slate-900/40 px-4 py-3 text-sm text-slate-400">
+          今日 AI 題材分析暫無，「題材／族群」欄改以產業別顯示。
+        </div>
+      );
+    }
+    return null;
   }
-
-  if (items.length === 0) return null;
 
   return (
     <section className="mb-5">

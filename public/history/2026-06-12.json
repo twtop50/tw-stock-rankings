@@ -704,7 +704,7 @@
   "asOf": "2026-06-12T13:30:00+08:00",
   "generatedAt": "2026-06-13T14:50:22.424Z",
   "source": "twse",
-  "aiSource": "none",
+  "aiSource": "gemini",
   "themeSummary": [
     {
       "theme": "半導體封測",

@@ -189,6 +189,27 @@ async function main() {
   if (allRows.length === 0) throw new Error("找不到可用的台股當日資料（可能為假日或來源暫時無回應）");
   console.log(`最新交易日：${date}（上市＋上櫃共 ${allRows.length} 檔個股）`);
 
+  // 失敗補跑 + 省成本：若「此交易日」資料已完整產生（有金鑰時需含 AI 市場焦點），直接結束。
+  // 使每 30 分一班的多次排程只在第一次真正運算、其餘快速略過；某班 AI 失敗時下一班會自動重試補上。
+  // 以環境變數 FORCE=1 可強制重算（手動需要時用）。
+  if (!process.env.FORCE) {
+    try {
+      const prev = JSON.parse(await fs.readFile(OUT_FILE, "utf8"));
+      const prevDate = typeof prev.asOf === "string" ? prev.asOf.slice(0, 10) : "";
+      const hasRows = (prev.rows?.length ?? 0) > 0;
+      // 有金鑰時，拿到「市場焦點或發動題材」其一即視為已完成（避免某段 AI 一直失敗時每班重跑狂打 429）。
+      const aiDone = geminiKey
+        ? !!prev.marketBriefing || (prev.themeSummary?.length ?? 0) > 0
+        : hasRows;
+      if (prevDate === date && hasRows && aiDone) {
+        console.log(`今日（${date}）資料已完整，略過重算（補跑機制）。`);
+        return;
+      }
+    } catch {
+      // 無既有檔或解析失敗 → 照常產生。
+    }
+  }
+
   const cache = await loadCache();
   const industryMap = await loadIndustryMap(cache);
   console.log(`產業別/股數對照：${industryMap.size} 檔`);
@@ -330,6 +351,10 @@ async function main() {
       }
     }
   } catch {}
+
+  // aiSource 反映實際產物：只要有題材或市場焦點（本次或沿用）即標記 gemini，
+  // 避免「題材呼叫失敗但市場焦點成功」時誤標 none、讓發動題材區塊藏起真有的資料。
+  if (geminiKey && (themeSummary.length > 0 || marketBrief)) aiSource = "gemini";
 
   const out = {
     rows,
