@@ -184,12 +184,7 @@ export default function StockTrendModal({ symbol, market, name, trend, loading, 
           </div>
         ) : (
           <div className="space-y-3">
-            <div className="space-y-2">
-              <p className="text-xs text-slate-500">
-                預覽為本站資料 · 共 {points.length} 個在榜交易日 · 完整看盤請點：
-              </p>
-              <ExtLinks />
-            </div>
+            <ExtLinks />
             <Panel label="收盤價" value={formatPrice(last.price)}>
               <LineChart
                 points={points}
