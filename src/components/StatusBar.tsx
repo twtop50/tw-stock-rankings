@@ -13,6 +13,16 @@ interface Props {
 }
 
 export default function StatusBar({ asOf, generatedAt, source, aiSource, notice, loading }: Props) {
+  // 資料新鮮度：以瀏覽器當天對比收盤日（台北）。週末/連假正常會有 2–3 天間隔，
+  // 故門檻設 5 個日曆天才示警，避免誤報；超過代表自動更新可能連續漏跑。
+  const staleDays = (() => {
+    if (!asOf) return null;
+    const d = new Date(`${asOf.slice(0, 10)}T00:00:00+08:00`);
+    if (Number.isNaN(d.getTime())) return null;
+    return Math.floor((Date.now() - d.getTime()) / 86_400_000);
+  })();
+  const isStale = staleDays != null && staleDays >= 5;
+
   return (
     <div className="mb-3 flex flex-wrap items-center justify-between gap-3 text-sm">
       <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-slate-400">
@@ -56,6 +66,12 @@ export default function StatusBar({ asOf, generatedAt, source, aiSource, notice,
       <p className="w-full text-xs leading-relaxed text-slate-500">
         ℹ️ 顯示最近一個台股交易日的收盤資料；每個交易日約 <span className="text-slate-400">15:00–16:00</span>（台北）於收盤後自動更新。
       </p>
+
+      {isStale && (
+        <p className="w-full rounded-md border border-amber-500/30 bg-amber-500/10 px-3 py-2 text-xs text-amber-300">
+          ⚠️ 資料已 {staleDays} 天未更新（最後收盤日 {asOf ? formatTradingDate(asOf) : "—"}），自動更新可能延遲或暫停，請留意數據時效。
+        </p>
+      )}
 
       {notice && (
         <p className="w-full rounded-md bg-rose-500/10 px-3 py-2 text-xs text-rose-300">
