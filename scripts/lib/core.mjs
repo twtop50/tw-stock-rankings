@@ -237,17 +237,52 @@ export async function fetchTpexLatest() {
 }
 
 /**
+ * 上市「指定日」資料的合理性檢查：與前一交易日（prev）共同個股的收盤價比值中位數，
+ * 應落在台股單日漲跌幅（±10%）的寬鬆區間內。用以擋掉上游盤後分批寫入時的「暫態壞檔」
+ * —— 曾觀察到 MI_INDEX 某瞬間整批價格被縮放 10×（台積電 227 vs 2310），中位數會掉到 ~0.1。
+ * 樣本太少（<20 檔共同個股）時不判斷，避免誤殺。
+ */
+function twseDatedSane(next, prev) {
+  const pm = new Map(prev.map((r) => [r.symbol, r.price]));
+  const ratios = [];
+  for (const r of next) {
+    const p = pm.get(r.symbol);
+    if (p > 0 && r.price > 0) ratios.push(r.price / p);
+  }
+  if (ratios.length < 20) return true;
+  ratios.sort((a, b) => a - b);
+  const med = ratios[Math.floor(ratios.length / 2)];
+  return med >= 0.7 && med <= 1.45;
+}
+
+/**
  * 抓上市＋上櫃當日全市場個股，回傳「同一交易日」的 { date, rows }。
  *
- * 交易日以「上市」為錨：每個交易日一定有上市資料，且 OpenAPI 兩端點偶有一邊落後
- * （實測證交所 STOCK_DAY_ALL 可能慢一天、櫃買已是新日）；若像舊版取「兩市場較大日期」，
- * 會把不同交易日的上市/上櫃混成一份髒資料。故以上市日期為準，上櫃只採同日者。
+ * 交易日以「上市」為錨（每個交易日一定有上市資料）。實測證交所 STOCK_DAY_ALL OpenAPI 會
+ * 落後一天（收盤後數小時、櫃買已是新日，它仍給前一交易日）；此時改用「指定日」MI_INDEX
+ * 端點補上市當日，並用 twseDatedSane() 擋掉上游暫態壞檔（壞則維持在上一個完整交易日，
+ * 待 OpenAPI 自己補上才前進）。櫃買只採與上市同日者，確保兩市場不混日。
  */
 export async function fetchAllLatest() {
-  const [twse, tpex] = await Promise.all([fetchTwseLatest(), fetchTpexLatest()]);
-  const twseDate = twse.map((r) => r.date).filter(Boolean).sort().pop();
+  const [twseOA, tpex] = await Promise.all([fetchTwseLatest(), fetchTpexLatest()]);
+  const oaDate = twseOA.map((r) => r.date).filter(Boolean).sort().pop();
   const tpexDate = tpex.map((r) => r.date).filter(Boolean).sort().pop();
-  const date = twseDate ?? tpexDate ?? fmtDate(new Date());
+
+  let twse = twseOA;
+  let date = oaDate;
+  // 上市 OpenAPI 落後於櫃買（有更新的交易日可拿）→ 試指定日端點補上市當日。
+  if (tpexDate && (!oaDate || tpexDate > oaDate)) {
+    const dated = await fetchTwseByDate(tpexDate).catch(() => []);
+    if (dated.length > 0 && twseDatedSane(dated, twseOA)) {
+      twse = dated;
+      date = tpexDate;
+      console.log(`  上市 OpenAPI 落後（${oaDate ?? "無"}），改用指定日端點 ${tpexDate}（已通過漲跌幅合理性檢查）`);
+    } else if (dated.length > 0) {
+      console.warn(`  指定日上市 ${tpexDate} 數值與前一交易日不連續（疑似上游壞檔），暫不採用，維持 ${oaDate}`);
+    }
+  }
+
+  date = date ?? tpexDate ?? fmtDate(new Date());
   const rows = [...twse.filter((r) => r.date === date), ...tpex.filter((r) => r.date === date)];
   return { date, rows };
 }
