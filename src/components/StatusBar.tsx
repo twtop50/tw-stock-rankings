@@ -13,15 +13,16 @@ interface Props {
 }
 
 export default function StatusBar({ asOf, generatedAt, source, aiSource, notice, loading }: Props) {
-  // 資料新鮮度：以瀏覽器當天對比收盤日（台北）。週末/連假正常會有 2–3 天間隔，
-  // 故門檻設 5 個日曆天才示警，避免誤報；超過代表自動更新可能連續漏跑。
+  // 資料新鮮度：以瀏覽器當天對比收盤日（台北）。正常情形最多 3 天（週五收盤 → 週一
+  // 盤後更新前 = 3 個日曆天），故門檻設 4 天：可在「週末後漏掉一個交易日」隔天就示警，
+  // 又不會在正常週一上午誤報；逢國定連假可能偶爾提早亮（可接受，寧可多提醒）。
   const staleDays = (() => {
     if (!asOf) return null;
     const d = new Date(`${asOf.slice(0, 10)}T00:00:00+08:00`);
     if (Number.isNaN(d.getTime())) return null;
     return Math.floor((Date.now() - d.getTime()) / 86_400_000);
   })();
-  const isStale = staleDays != null && staleDays >= 5;
+  const isStale = staleDays != null && staleDays >= 4;
 
   return (
     <div className="mb-3 flex flex-wrap items-center justify-between gap-3 text-sm">
