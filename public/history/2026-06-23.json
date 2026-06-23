@@ -9,7 +9,7 @@
       "dollarVolume": 94917149104,
       "marketCap": 2138087427900,
       "sector": "半導體業",
-      "theme": "晶圓代工",
+      "theme": "記憶體",
       "isNew": false,
       "rankChange": 28,
       "streak": 48
@@ -79,7 +79,7 @@
       "dollarVolume": 51475782771,
       "marketCap": 527287024242,
       "sector": "光電業",
-      "theme": "光電業",
+      "theme": "面板",
       "isNew": false,
       "rankChange": -2,
       "streak": 5
@@ -107,7 +107,7 @@
       "dollarVolume": 41252065359,
       "marketCap": 333562971999,
       "sector": "半導體業",
-      "theme": "半導體業",
+      "theme": "晶圓代工",
       "isNew": false,
       "rankChange": 20,
       "streak": 6
@@ -121,7 +121,7 @@
       "dollarVolume": 37084992829,
       "marketCap": 340785117040,
       "sector": "半導體業",
-      "theme": "半導體業",
+      "theme": "記憶體",
       "isNew": false,
       "rankChange": 1,
       "streak": 5
@@ -233,7 +233,7 @@
       "dollarVolume": 25877127021,
       "marketCap": 402894498917.5,
       "sector": "半導體業",
-      "theme": "半導體業",
+      "theme": "封測",
       "isNew": false,
       "rankChange": -8,
       "streak": 3
@@ -275,7 +275,7 @@
       "dollarVolume": 23270434941,
       "marketCap": 279963154598,
       "sector": "電子零組件業",
-      "theme": "電子零組件業",
+      "theme": "被動元件",
       "isNew": false,
       "rankChange": 3,
       "streak": 3
@@ -289,7 +289,7 @@
       "dollarVolume": 22989267027,
       "marketCap": 221296880448,
       "sector": "半導體業",
-      "theme": "砷化鎵",
+      "theme": "PA 功率放大器",
       "isNew": false,
       "rankChange": -2,
       "streak": 67
@@ -331,7 +331,7 @@
       "dollarVolume": 16318150473,
       "marketCap": 35307055124,
       "sector": "半導體業",
-      "theme": "半導體業",
+      "theme": "二極體",
       "isNew": true,
       "rankChange": null,
       "streak": 1
@@ -359,7 +359,7 @@
       "dollarVolume": 13489880537,
       "marketCap": 517650085030.5,
       "sector": "電腦及週邊設備業",
-      "theme": "電腦及週邊設備業",
+      "theme": "電源供應器",
       "isNew": false,
       "rankChange": 4,
       "streak": 2
@@ -373,7 +373,7 @@
       "dollarVolume": 12562811478,
       "marketCap": 73939238374.5,
       "sector": "半導體業",
-      "theme": "半導體業",
+      "theme": "二極體",
       "isNew": true,
       "rankChange": null,
       "streak": 1
@@ -401,7 +401,7 @@
       "dollarVolume": 12187553024,
       "marketCap": 165950316000,
       "sector": "電子零組件業",
-      "theme": "電子零組件業",
+      "theme": "銅箔基板",
       "isNew": false,
       "rankChange": -14,
       "streak": 2
@@ -415,7 +415,7 @@
       "dollarVolume": 12038481505,
       "marketCap": 89157005784,
       "sector": "半導體業",
-      "theme": "半導體業",
+      "theme": "光通訊",
       "isNew": false,
       "rankChange": 1,
       "streak": 3
@@ -443,7 +443,7 @@
       "dollarVolume": 11896559360,
       "marketCap": 501023995195,
       "sector": "電子零組件業",
-      "theme": "CCL",
+      "theme": "銅箔基板",
       "isNew": false,
       "rankChange": -11,
       "streak": 67
@@ -457,7 +457,7 @@
       "dollarVolume": 11849352085,
       "marketCap": 2042430349800,
       "sector": "電子零組件業",
-      "theme": "CCL",
+      "theme": "銅箔基板",
       "isNew": false,
       "rankChange": -9,
       "streak": 67
@@ -499,7 +499,7 @@
       "dollarVolume": 9993882040,
       "marketCap": 203273449920.00003,
       "sector": "玻璃陶瓷",
-      "theme": "玻璃陶瓷",
+      "theme": "玻璃",
       "isNew": false,
       "rankChange": -14,
       "streak": 3
@@ -583,7 +583,7 @@
       "dollarVolume": 8900854599,
       "marketCap": 82359069906,
       "sector": "半導體業",
-      "theme": "半導體業",
+      "theme": "CoWoS 先進封裝",
       "isNew": true,
       "rankChange": null,
       "streak": 1
@@ -597,7 +597,7 @@
       "dollarVolume": 8828892645,
       "marketCap": 170988867000,
       "sector": "半導體業",
-      "theme": "半導體業",
+      "theme": "IP 矽智財",
       "isNew": true,
       "rankChange": null,
       "streak": 1
@@ -611,7 +611,7 @@
       "dollarVolume": 8426794519,
       "marketCap": 102160983258,
       "sector": "電子零組件業",
-      "theme": "電子零組件業",
+      "theme": "銅箔基板",
       "isNew": false,
       "rankChange": -18,
       "streak": 2
@@ -639,7 +639,7 @@
       "dollarVolume": 8213622963,
       "marketCap": 331030239136,
       "sector": "半導體業",
-      "theme": "半導體業",
+      "theme": "IC 設計",
       "isNew": true,
       "rankChange": null,
       "streak": 1
@@ -653,7 +653,7 @@
       "dollarVolume": 7714451310,
       "marketCap": 154585110240,
       "sector": "通信網路業",
-      "theme": "通信網路業",
+      "theme": "光通訊",
       "isNew": true,
       "rankChange": null,
       "streak": 1
@@ -667,7 +667,7 @@
       "dollarVolume": 7693480439,
       "marketCap": 72946664560,
       "sector": "半導體業",
-      "theme": "半導體業",
+      "theme": "記憶體",
       "isNew": true,
       "rankChange": null,
       "streak": 1
@@ -681,7 +681,7 @@
       "dollarVolume": 7590124960,
       "marketCap": 65681588785,
       "sector": "半導體業",
-      "theme": "半導體業",
+      "theme": "矽晶圓",
       "isNew": false,
       "rankChange": -17,
       "streak": 4
@@ -695,95 +695,194 @@
       "dollarVolume": 7469311022,
       "marketCap": 504095341625,
       "sector": "電腦及週邊設備業",
-      "theme": "AI 伺服器",
+      "theme": "電子代工",
       "isNew": false,
       "rankChange": -6,
       "streak": 4
     }
   ],
   "asOf": "2026-06-23T13:30:00+08:00",
-  "generatedAt": "2026-06-23T08:03:20.315Z",
+  "generatedAt": "2026-06-23T08:32:00.487Z",
   "source": "twse",
-  "aiSource": "none",
-  "themeSummary": [],
+  "aiSource": "gemini",
+  "themeSummary": [
+    {
+      "theme": "二極體",
+      "reason": "受惠於電動車、工控及綠能等應用需求成長，二極體產業前景看好，帶動相關個股表現。",
+      "symbols": [
+        "5425",
+        "2481"
+      ],
+      "count": 2,
+      "avgChange": 6.5100524475524475
+    },
+    {
+      "theme": "光通訊",
+      "reason": "AI 發展帶動高速傳輸需求，光通訊元件及模組廠受惠於資料中心升級及新技術導入。",
+      "symbols": [
+        "3450",
+        "6442"
+      ],
+      "count": 2,
+      "avgChange": 2.4191777637136256
+    },
+    {
+      "theme": "記憶體",
+      "reason": "記憶體產業景氣逐漸復甦，DRAM 及 NAND Flash 價格止跌回穩，帶動相關供應鏈表現。",
+      "symbols": [
+        "2303"
+      ],
+      "count": 1,
+      "avgChange": 6.25
+    },
+    {
+      "theme": "ABF 載板",
+      "reason": "AI 晶片需求持續增長，帶動 ABF 載板供不應求，相關廠商營運展望佳。",
+      "symbols": [
+        "8046"
+      ],
+      "count": 1,
+      "avgChange": 5.208333333333334
+    },
+    {
+      "theme": "IP 矽智財",
+      "reason": "AI 晶片設計複雜度提升，對 IP 矽智財需求大增，相關廠商營收獲利成長可期。",
+      "symbols": [
+        "3661"
+      ],
+      "count": 1,
+      "avgChange": 1.1560693641618496
+    },
+    {
+      "theme": "CoWoS 先進封裝",
+      "reason": "AI 晶片對先進封裝技術需求殷切，CoWoS 產能供不應求，相關供應鏈受惠。",
+      "symbols": [
+        "3374"
+      ],
+      "count": 1,
+      "avgChange": 9.96376811594203
+    }
+  ],
   "newEntrants": [
     {
       "symbol": "5425",
       "name": "台半",
-      "theme": "半導體業",
+      "theme": "二極體",
       "changePercent": 3.076923076923077,
-      "reason": "5月營收創歷史新高，新產品MOSFET、TVS、ESD等效益發酵，獲法人與主力買超帶動。"
+      "reason": "受惠功率元件漲價潮與AI伺服器及電動車需求擴展，營收創歷史新高且法人買超帶動放量。"
     },
     {
       "symbol": "6147",
       "name": "頎邦",
       "theme": "驅動IC",
       "changePercent": -6.859205776173286,
-      "reason": "AI光通訊與矽光題材發酵，券商調升目標價，外資與投信買超，4月營收創47個月新高。"
+      "reason": "受惠AI光通訊題材發酵、非驅動IC佈局及先進封裝需求，帶動資金輪動。"
     },
     {
       "symbol": "2481",
       "name": "強茂",
-      "theme": "半導體業",
+      "theme": "二極體",
       "changePercent": 9.943181818181818,
-      "reason": "受惠AI伺服器與電動車需求，高效率Power MOSFET供不應求，訂單能見度高，法人看好獲利成長。"
+      "reason": "受惠功率元件大缺貨、國際大廠漲價及AI伺服器供應鏈題材，帶動資金追捧。"
     },
     {
       "symbol": "5347",
       "name": "世界",
       "theme": "晶圓代工",
       "changePercent": -2.610966057441253,
-      "reason": "AI伺服器電源管理需求強勁，第二季晶圓出貨量與ASP預期成長，新加坡新廠產能被客戶預訂一空。"
+      "reason": "近期無明確個股消息，可能受族群輪動帶動。"
     },
     {
       "symbol": "8150",
       "name": "南茂",
       "theme": "封測",
       "changePercent": -6.578947368421052,
-      "reason": "記憶體封測報價上漲，AI帶動DRAM需求，產能稼動率高，法人買超。"
+      "reason": "記憶體景氣復甦、DRAM價格上漲，帶動記憶體封測需求，吸引資金進駐。"
     },
     {
       "symbol": "3374",
       "name": "精材",
-      "theme": "半導體業",
+      "theme": "CoWoS 先進封裝",
       "changePercent": 9.96376811594203,
-      "reason": "切入AI晶片測試供應鏈，台積電訂單挹注，測試業務營收占比擴增，法人買超。"
+      "reason": "受惠AI晶片與台積電先進封裝題材加持，主力與法人同步偏多推升股價。"
     },
     {
       "symbol": "6531",
       "name": "愛普*",
-      "theme": "半導體業",
+      "theme": "IP 矽智財",
       "changePercent": -5.829596412556054,
-      "reason": "AI與HPC帶動S-SiCap、IPD矽電容及IoTRAM產品成長，營收連創新高，獲列注意股。"
+      "reason": "AI先進封裝、AI記憶體與HPC需求帶動S-SiCap、IPD矽電容等產品成長，營收連創新高。"
     },
     {
       "symbol": "6223",
       "name": "旺矽",
       "theme": "半導體設備",
       "changePercent": 3.968871595330739,
-      "reason": "AI帶動探針卡與測試需求，產能滿載，月營收連續創高，法人買盤支撐。"
+      "reason": "受惠AI探針卡長線訂單能見度、客戶預付款機制及產能擴充，法人調升目標價。"
     },
     {
       "symbol": "3034",
       "name": "聯詠",
-      "theme": "半導體業",
+      "theme": "IC 設計",
       "changePercent": -4.056437389770723,
-      "reason": "被納入ESG指數成分股，Edge-AI影像應用需求偏多，5月營收年增，法人買超。"
+      "reason": "被納入ESG指數成分股、客戶提前拉貨、新產品帶動營運成長，且法人買盤積極。"
     },
     {
       "symbol": "6442",
       "name": "光聖",
-      "theme": "通信網路業",
+      "theme": "光通訊",
       "changePercent": -5.0359712230215825,
-      "reason": "近期無明確個股消息，可能受族群輪動帶動。"
+      "reason": "AI基礎建設帶動光纖強勁需求，光通訊市場產能吃緊及漲價潮，營收創歷史新高。"
     },
     {
       "symbol": "3006",
       "name": "晶豪科",
-      "theme": "半導體業",
+      "theme": "記憶體",
       "changePercent": -3.543307086614173,
-      "reason": "DDR2價格與接單量齊揚，承接市場缺口，5月營收年增近3倍，獲利顯著。"
+      "reason": "DDR3/DDR4產能被排擠導致供給斷層，利基型記憶體價格上漲，法人買超。"
     }
   ],
-  "marketBriefing": null
+  "marketBriefing": {
+    "highlights": "本日台股在早盤衝上48000點歷史新高後，隨即出現獲利了結賣壓，終場大跌640.86點，收在47100.65點，成交量達1.6兆元。資金主要集中在科技股，尤其是AI相關概念股，但記憶體族群受到韓國股市重挫及美光財報觀望氛圍影響，成為盤面重災區，南亞科甚至一度跌停。晶圓代工雙雄表現分歧，台積電開高走低，聯電則受惠於台積電縮減28奈米產能及與英特爾合作3奈米製程的消息而逆勢上漲。外資今日賣超台股385.92億元，投信則買超72.16億元。",
+    "eventsPast": [
+      {
+        "title": "記憶體族群重挫",
+        "detail": "受韓國股市記憶體晶片龍頭三星電子與SK海力士盤中跌幅超過5%影響，台股記憶體族群今日全面承壓，南亞科、旺宏、華邦電等指標股領跌。"
+      },
+      {
+        "title": "台積電縮減28奈米產能，聯電受惠",
+        "detail": "台積電加速聚焦先進製程，主動大幅縮減28奈米成熟製程產能，市場預期將引發轉單效應，聯電集團受惠，聯電股價強勢上漲。"
+      },
+      {
+        "title": "聯電與英特爾洽談3奈米製程合作",
+        "detail": "市場傳出聯電與英特爾除了12奈米合作框架外，正進一步洽談共同開發3奈米製程的可能性，為聯電帶來雙重題材利多。"
+      },
+      {
+        "title": "南電ABF載板漲價幅度高於預期",
+        "detail": "亞系券商表示，ABF載板本季迄今的漲價幅度高於原先預估，上調南電毛利率預估，並預期下半年將有第二波漲價。"
+      }
+    ],
+    "eventsUpcoming": [
+      {
+        "date": "6/24",
+        "title": "日月光投控股東常會",
+        "detail": "日月光投控將召開股東常會，預計將聚焦先進封裝擴產進度、面板級封裝（PLP）布局及AI相關業務成長展望。"
+      },
+      {
+        "date": "本週",
+        "title": "美國5月個人消費支出物價指數(PCE)公布",
+        "detail": "市場焦點將轉向美國5月個人消費支出物價指數(PCE)，以評估聯準會未來利率政策走向。"
+      },
+      {
+        "date": "6/30",
+        "title": "台積電除息",
+        "detail": "台積電將於6月30日除息，投資人需在除息前一天買進並持有才能參與配息。"
+      },
+      {
+        "date": "本週",
+        "title": "美光財報公布",
+        "detail": "記憶體大廠美光（Micron）即將公告財報，市場對其AI需求下的獲利表現抱持高度期待，但同時也存在觀望氛圍。"
+      }
+    ]
+  }
 }
