@@ -6,9 +6,9 @@
       "name": "台積電",
       "price": 2460,
       "changePercent": 0.6134969325153374,
-      "dollarVolume": 51485962225,
-      "marketCap": 0,
-      "sector": "—",
+      "dollarVolume": 52022654454,
+      "marketCap": 63793630364820,
+      "sector": "半導體業",
       "theme": "晶圓代工",
       "isNew": false,
       "rankChange": 0,
@@ -20,9 +20,9 @@
       "name": "國巨*",
       "price": 1005,
       "changePercent": -3.827751196172249,
-      "dollarVolume": 42727916885,
-      "marketCap": 0,
-      "sector": "—",
+      "dollarVolume": 43370591885,
+      "marketCap": 2081822811420,
+      "sector": "電子零組件業",
       "theme": "被動元件",
       "isNew": false,
       "rankChange": 1,
@@ -35,8 +35,8 @@
       "price": 69.2,
       "changePercent": 4.848484848484849,
       "dollarVolume": 35742720630,
-      "marketCap": 0,
-      "sector": "—",
+      "marketCap": 552852455720.4,
+      "sector": "光電業",
       "theme": "面板",
       "isNew": false,
       "rankChange": 7,
@@ -49,8 +49,8 @@
       "price": 183,
       "changePercent": -0.8130081300813009,
       "dollarVolume": 31253105406,
-      "marketCap": 0,
-      "sector": "—",
+      "marketCap": 823500035319,
+      "sector": "半導體業",
       "theme": "記憶體",
       "isNew": false,
       "rankChange": 2,
@@ -90,9 +90,9 @@
       "name": "聯發科",
       "price": 4125,
       "changePercent": -1.66865315852205,
-      "dollarVolume": 28888091965,
-      "marketCap": 0,
-      "sector": "—",
+      "dollarVolume": 28930241965,
+      "marketCap": 6616068553875,
+      "sector": "半導體業",
       "theme": "IC 設計",
       "isNew": false,
       "rankChange": -5,
@@ -105,8 +105,8 @@
       "price": 420.5,
       "changePercent": 2.6862026862026864,
       "dollarVolume": 26866583275,
-      "marketCap": 0,
-      "sector": "—",
+      "marketCap": 1450811578427,
+      "sector": "半導體業",
       "theme": "記憶體",
       "isNew": false,
       "rankChange": 0,
@@ -118,9 +118,9 @@
       "name": "欣興",
       "price": 917,
       "changePercent": 0,
-      "dollarVolume": 22784398949,
-      "marketCap": 0,
-      "sector": "—",
+      "dollarVolume": 23192638949,
+      "marketCap": 1456996500652,
+      "sector": "電子零組件業",
       "theme": "ABF 載板",
       "isNew": false,
       "rankChange": 2,
@@ -133,8 +133,8 @@
       "price": 579,
       "changePercent": -5.5464926590538335,
       "dollarVolume": 19983790003,
-      "marketCap": 0,
-      "sector": "—",
+      "marketCap": 642045922716,
+      "sector": "電子零組件業",
       "theme": "PCB",
       "isNew": false,
       "rankChange": 7,
@@ -147,8 +147,8 @@
       "price": 5475,
       "changePercent": -9.950657894736842,
       "dollarVolume": 19665733290,
-      "marketCap": 0,
-      "sector": "—",
+      "marketCap": 1961808099150,
+      "sector": "電子零組件業",
       "theme": "CCL 銅箔基板",
       "isNew": false,
       "rankChange": 1,
@@ -161,8 +161,8 @@
       "price": 963,
       "changePercent": -2.5303643724696356,
       "dollarVolume": 19432899513,
-      "marketCap": 0,
-      "sector": "—",
+      "marketCap": 159752376234,
+      "sector": "電子零組件業",
       "theme": "被動元件",
       "isNew": false,
       "rankChange": 2,
@@ -175,9 +175,9 @@
       "price": 351,
       "changePercent": 4.776119402985075,
       "dollarVolume": 18980742211,
-      "marketCap": 0,
-      "sector": "—",
-      "theme": "IC 測試",
+      "marketCap": 429183517815,
+      "sector": "半導體業",
+      "theme": "IC 封測",
       "isNew": false,
       "rankChange": 12,
       "streak": 12
@@ -188,9 +188,9 @@
       "name": "台達電",
       "price": 1995,
       "changePercent": -3.8554216867469884,
-      "dollarVolume": 18237538485,
-      "marketCap": 0,
-      "sector": "—",
+      "dollarVolume": 18891547485,
+      "marketCap": 5182098941355,
+      "sector": "電子零組件業",
       "theme": "電源供應器",
       "isNew": false,
       "rankChange": -10,
@@ -202,10 +202,10 @@
       "name": "日月光投控",
       "price": 679,
       "changePercent": -0.43988269794721413,
-      "dollarVolume": 16079217557,
-      "marketCap": 0,
-      "sector": "—",
-      "theme": "封測",
+      "dollarVolume": 16106026547,
+      "marketCap": 3028905662678,
+      "sector": "半導體業",
+      "theme": "IC 封測",
       "isNew": false,
       "rankChange": -8,
       "streak": 70
@@ -217,8 +217,8 @@
       "price": 1075,
       "changePercent": -9.282700421940929,
       "dollarVolume": 15419445810,
-      "marketCap": 0,
-      "sector": "—",
+      "marketCap": 694627898525,
+      "sector": "電子零組件業",
       "theme": "ABF 載板",
       "isNew": false,
       "rankChange": -3,
@@ -231,9 +231,9 @@
       "price": 344.5,
       "changePercent": 1.9230769230769231,
       "dollarVolume": 15061879686,
-      "marketCap": 0,
-      "sector": "—",
-      "theme": "記憶體封測",
+      "marketCap": 261526015413,
+      "sector": "半導體業",
+      "theme": "IC 封測",
       "isNew": false,
       "rankChange": 30,
       "streak": 17
@@ -259,8 +259,8 @@
       "price": 224.5,
       "changePercent": -9.839357429718875,
       "dollarVolume": 13401203180,
-      "marketCap": 0,
-      "sector": "—",
+      "marketCap": 77001921989.5,
+      "sector": "電子零組件業",
       "theme": "石英元件",
       "isNew": false,
       "rankChange": -10,
@@ -273,8 +273,8 @@
       "price": 396,
       "changePercent": 0.5076142131979695,
       "dollarVolume": 13254207117,
-      "marketCap": 0,
-      "sector": "—",
+      "marketCap": 143970638328,
+      "sector": "電子零組件業",
       "theme": "CCL 銅箔基板",
       "isNew": false,
       "rankChange": 3,
@@ -287,8 +287,8 @@
       "price": 31.7,
       "changePercent": 5.666666666666666,
       "dollarVolume": 12889868568,
-      "marketCap": 0,
-      "sector": "—",
+      "marketCap": 239243037412.4,
+      "sector": "光電業",
       "theme": "面板",
       "isNew": false,
       "rankChange": 16,
@@ -301,8 +301,8 @@
       "price": 4605,
       "changePercent": -8.630952380952381,
       "dollarVolume": 11907340800,
-      "marketCap": 0,
-      "sector": "—",
+      "marketCap": 617124850155,
+      "sector": "半導體業",
       "theme": "IP 矽智財",
       "isNew": false,
       "rankChange": 4,
@@ -315,8 +315,8 @@
       "price": 72.6,
       "changePercent": -1.0899182561307903,
       "dollarVolume": 11454973670,
-      "marketCap": 0,
-      "sector": "—",
+      "marketCap": 338592149709,
+      "sector": "半導體業",
       "theme": "晶圓代工",
       "isNew": false,
       "rankChange": 9,
@@ -345,7 +345,7 @@
       "dollarVolume": 11054720275,
       "marketCap": 506286360630,
       "sector": "半導體業",
-      "theme": "NAND 控制晶片",
+      "theme": "NAND 控制IC",
       "isNew": false,
       "rankChange": 4,
       "streak": 76
@@ -356,9 +356,9 @@
       "name": "鴻海",
       "price": 242,
       "changePercent": 0.6237006237006237,
-      "dollarVolume": 10621310975,
-      "marketCap": 0,
-      "sector": "—",
+      "dollarVolume": 10638459575,
+      "marketCap": 3394932967492,
+      "sector": "其他電子業",
       "theme": "電子代工",
       "isNew": false,
       "rankChange": -6,
@@ -371,8 +371,8 @@
       "price": 2670,
       "changePercent": -3.260869565217391,
       "dollarVolume": 10032199845,
-      "marketCap": 0,
-      "sector": "—",
+      "marketCap": 1048089828690,
+      "sector": "電腦及週邊設備業",
       "theme": "散熱",
       "isNew": false,
       "rankChange": -9,
@@ -385,12 +385,26 @@
       "price": 4215,
       "changePercent": -9.35483870967742,
       "dollarVolume": 9897063785,
-      "marketCap": 0,
-      "sector": "—",
+      "marketCap": 363352903230,
+      "sector": "半導體業",
       "theme": "IP 矽智財",
       "isNew": false,
       "rankChange": -12,
       "streak": 8
+    },
+    {
+      "symbol": "2382",
+      "market": "twse",
+      "name": "廣達",
+      "price": 378,
+      "changePercent": 0.2652519893899204,
+      "dollarVolume": 9568079760,
+      "marketCap": 1460073169296,
+      "sector": "電腦及週邊設備業",
+      "theme": "AI 伺服器",
+      "isNew": true,
+      "rankChange": null,
+      "streak": 1
     },
     {
       "symbol": "2337",
@@ -399,26 +413,12 @@
       "price": 144.5,
       "changePercent": 1.4035087719298245,
       "dollarVolume": 9415382927,
-      "marketCap": 0,
-      "sector": "—",
+      "marketCap": 286299124490,
+      "sector": "半導體業",
       "theme": "記憶體",
       "isNew": false,
-      "rankChange": 2,
+      "rankChange": 1,
       "streak": 14
-    },
-    {
-      "symbol": "2382",
-      "market": "twse",
-      "name": "廣達",
-      "price": 378,
-      "changePercent": 0.2652519893899204,
-      "dollarVolume": 9369132760,
-      "marketCap": 0,
-      "sector": "—",
-      "theme": "AI 伺服器",
-      "isNew": true,
-      "rankChange": null,
-      "streak": 1
     },
     {
       "symbol": "6147",
@@ -429,7 +429,7 @@
       "dollarVolume": 9260477241,
       "marketCap": 161576797963,
       "sector": "半導體業",
-      "theme": "驅動 IC 封測",
+      "theme": "驅動IC",
       "isNew": false,
       "rankChange": 14,
       "streak": 10
@@ -441,8 +441,8 @@
       "price": 166,
       "changePercent": -2.6392961876832843,
       "dollarVolume": 9165631392,
-      "marketCap": 0,
-      "sector": "—",
+      "marketCap": 2087779488420,
+      "sector": "半導體業",
       "theme": "晶圓代工",
       "isNew": false,
       "rankChange": -13,
@@ -455,8 +455,8 @@
       "price": 67.6,
       "changePercent": -0.5882352941176471,
       "dollarVolume": 8944338744,
-      "marketCap": 0,
-      "sector": "—",
+      "marketCap": 396216193271.6,
+      "sector": "塑膠工業",
       "theme": "塑化",
       "isNew": false,
       "rankChange": 10,
@@ -469,8 +469,8 @@
       "price": 85.4,
       "changePercent": 4.656862745098039,
       "dollarVolume": 8806806252,
-      "marketCap": 0,
-      "sector": "—",
+      "marketCap": 100109764248.20001,
+      "sector": "化學工業",
       "theme": "特用化學",
       "isNew": true,
       "rankChange": null,
@@ -483,8 +483,8 @@
       "price": 4135,
       "changePercent": -2.2458628841607564,
       "dollarVolume": 8605759010,
-      "marketCap": 0,
-      "sector": "—",
+      "marketCap": 540850544595,
+      "sector": "光電業",
       "theme": "光學鏡頭",
       "isNew": false,
       "rankChange": 7,
@@ -497,8 +497,8 @@
       "price": 235,
       "changePercent": 2.3965141612200433,
       "dollarVolume": 8434741056,
-      "marketCap": 0,
-      "sector": "—",
+      "marketCap": 280077838415,
+      "sector": "電子零組件業",
       "theme": "PCB",
       "isNew": false,
       "rankChange": -1,
@@ -511,9 +511,9 @@
       "price": 272,
       "changePercent": -2.5089605734767026,
       "dollarVolume": 8208928431,
-      "marketCap": 0,
-      "sector": "—",
-      "theme": "CIS 影像感測",
+      "marketCap": 56863782528,
+      "sector": "半導體業",
+      "theme": "CMOS 影像感測器",
       "isNew": false,
       "rankChange": -4,
       "streak": 4
@@ -525,8 +525,8 @@
       "price": 95.8,
       "changePercent": -0.6224066390041494,
       "dollarVolume": 7701837514,
-      "marketCap": 0,
-      "sector": "—",
+      "marketCap": 15272533907.6,
+      "sector": "電子零組件業",
       "theme": "石英元件",
       "isNew": false,
       "rankChange": -14,
@@ -567,8 +567,8 @@
       "price": 406,
       "changePercent": -7.727272727272727,
       "dollarVolume": 7111375564,
-      "marketCap": 0,
-      "sector": "—",
+      "marketCap": 157466409800,
+      "sector": "半導體業",
       "theme": "矽晶圓",
       "isNew": true,
       "rankChange": null,
@@ -581,8 +581,8 @@
       "price": 1225,
       "changePercent": -6.130268199233716,
       "dollarVolume": 6791252975,
-      "marketCap": 0,
-      "sector": "—",
+      "marketCap": 633382496600,
+      "sector": "電子零組件業",
       "theme": "PCB",
       "isNew": false,
       "rankChange": -8,
@@ -595,8 +595,8 @@
       "price": 5035,
       "changePercent": -4.368471035137702,
       "dollarVolume": 6402455545,
-      "marketCap": 0,
-      "sector": "—",
+      "marketCap": 935708382685,
+      "sector": "電腦及週邊設備業",
       "theme": "AI 伺服器",
       "isNew": false,
       "rankChange": -13,
@@ -609,8 +609,8 @@
       "price": 905,
       "changePercent": 3.192702394526796,
       "dollarVolume": 6344773436,
-      "marketCap": 0,
-      "sector": "—",
+      "marketCap": 80097180660,
+      "sector": "電機機械",
       "theme": "自動化設備",
       "isNew": true,
       "rankChange": null,
@@ -623,8 +623,8 @@
       "price": 2645,
       "changePercent": -3.2906764168190126,
       "dollarVolume": 6124581505,
-      "marketCap": 0,
-      "sector": "—",
+      "marketCap": 1484156837565,
+      "sector": "通信網路業",
       "theme": "網通設備",
       "isNew": false,
       "rankChange": -17,
@@ -637,9 +637,9 @@
       "price": 273,
       "changePercent": 7.269155206286837,
       "dollarVolume": 6060602691,
-      "marketCap": 0,
-      "sector": "—",
-      "theme": "IC 測試",
+      "marketCap": 132108064725,
+      "sector": "半導體業",
+      "theme": "IC 封測",
       "isNew": true,
       "rankChange": null,
       "streak": 1
@@ -665,9 +665,9 @@
       "price": 115.5,
       "changePercent": 10,
       "dollarVolume": 5950555879,
-      "marketCap": 0,
-      "sector": "—",
-      "theme": "記憶體封測",
+      "marketCap": 81372421053,
+      "sector": "半導體業",
+      "theme": "IC 封測",
       "isNew": true,
       "rankChange": null,
       "streak": 1
@@ -679,8 +679,8 @@
       "price": 224,
       "changePercent": 2.28310502283105,
       "dollarVolume": 5727772197,
-      "marketCap": 0,
-      "sector": "—",
+      "marketCap": 518808138912,
+      "sector": "電腦及週邊設備業",
       "theme": "電源供應器",
       "isNew": true,
       "rankChange": null,
@@ -702,13 +702,25 @@
     }
   ],
   "asOf": "2026-07-06T13:30:00+08:00",
-  "generatedAt": "2026-07-06T08:03:43.788Z",
+  "generatedAt": "2026-07-06T14:30:33.654Z",
   "source": "twse",
   "aiSource": "gemini",
   "themeSummary": [
     {
+      "theme": "IC 封測",
+      "reason": "受惠於AI晶片需求成長，先進封裝技術重要性提升，相關供應鏈持續受到市場關注。",
+      "symbols": [
+        "2449",
+        "6239",
+        "6257",
+        "8150"
+      ],
+      "count": 4,
+      "avgChange": 5.992087883087208
+    },
+    {
       "theme": "面板",
-      "reason": "面板產業受惠於庫存回補需求及報價上漲，營運展望轉佳。",
+      "reason": "面板報價止跌回穩，加上電視與IT產品需求預期復甦，帶動面板廠營運展望改善。",
       "symbols": [
         "3481",
         "2409"
@@ -717,51 +729,41 @@
       "avgChange": 5.257575757575758
     },
     {
-      "theme": "記憶體封測",
-      "reason": "記憶體產業景氣復甦，帶動相關封測需求增溫。",
+      "theme": "記憶體",
+      "reason": "記憶體產業景氣逐漸復甦，DRAM與NAND Flash價格上漲，有助於相關廠商獲利改善。",
       "symbols": [
-        "6239",
-        "8150"
+        "2408",
+        "2337"
       ],
       "count": 2,
-      "avgChange": 5.961538461538462
+      "avgChange": 2.0448557290662555
     },
     {
-      "theme": "IC 測試",
-      "reason": "半導體產業庫存調整進入尾聲，測試需求逐步回升。",
+      "theme": "矽晶圓",
+      "reason": "半導體產業庫存調整進入尾聲，晶圓廠稼動率回升，帶動矽晶圓需求增溫。",
       "symbols": [
-        "2449",
-        "6257"
-      ],
-      "count": 2,
-      "avgChange": 6.022637304635956
-    },
-    {
-      "theme": "特用化學",
-      "reason": "特用化學品應用廣泛，受惠於產業需求穩定成長。",
-      "symbols": [
-        "1717"
+        "6488"
       ],
       "count": 1,
-      "avgChange": 4.656862745098039
+      "avgChange": 6.374501992031872
     },
     {
-      "theme": "自動化設備",
-      "reason": "製造業自動化趨勢不變，相關設備需求持續看好。",
+      "theme": "晶圓代工",
+      "reason": "AI、HPC等新興應用需求持續成長，帶動晶圓代工訂單能見度提升。",
       "symbols": [
-        "3167"
+        "2330"
       ],
       "count": 1,
-      "avgChange": 3.192702394526796
+      "avgChange": 0.6134969325153374
     },
     {
-      "theme": "PA 功率放大器",
-      "reason": "5G 應用普及及新興技術發展，推升 PA 需求。",
+      "theme": "電子代工",
+      "reason": "受惠於AI伺服器與新產品出貨動能，大型電子代工廠營運表現穩健。",
       "symbols": [
-        "3105"
+        "2317"
       ],
       "count": 1,
-      "avgChange": 2.4330900243309004
+      "avgChange": 0.6237006237006237
     }
   ],
   "newEntrants": [
@@ -770,112 +772,116 @@
       "name": "環球晶",
       "theme": "矽晶圓",
       "changePercent": 6.374501992031872,
-      "reason": "受惠矽晶圓市況走出谷底，AI需求強勁，以及開發方形晶圓等利多消息激勵，股價衝上漲停。"
+      "reason": "受惠矽晶圓市況回溫、AI需求強勁，以及開發方形晶圓等利多消息激勵，股價衝上漲停。"
     },
     {
       "symbol": "2382",
       "name": "廣達",
       "theme": "AI 伺服器",
       "changePercent": 0.2652519893899204,
-      "reason": "AI伺服器需求持續帶旺營運，市場看好第二季營收可望創高，下半年業績更上一層樓。"
+      "reason": "AI伺服器需求持續帶旺營運，市場看好第二季營收可望創同期新高，且外資、投信土洋對作。"
     },
     {
       "symbol": "1717",
       "name": "長興",
       "theme": "特用化學",
       "changePercent": 4.656862745098039,
-      "reason": "子公司長廣（7795）在高階ABF載板設備市場市占率高，受惠AI需求成長，長興母憑子貴。"
+      "reason": "子公司長廣在高階ABF載板設備市場具優勢，受惠AI需求成長，長興母憑子貴爆量大漲。"
     },
     {
       "symbol": "3374",
       "name": "精材",
       "theme": "CoWoS 先進封裝",
       "changePercent": 2.8753993610223643,
-      "reason": "近期無明確個股消息，可能受族群輪動帶動。"
+      "reason": "受惠台積電CoWoS產能排擠效應，承接蘋果AP測試代工訂單，加上AI手機與AI PC帶動3D感測需求。"
     },
     {
       "symbol": "3532",
       "name": "台勝科",
       "theme": "矽晶圓",
       "changePercent": -7.727272727272727,
-      "reason": "矽晶圓市場全面好轉，8吋及12吋矽晶圓廠已滿載生產，且積極布局先進封裝材料。"
+      "reason": "董事長表示下半年獲利可望優於上半年，且矽晶圓調漲價格獲正面回應，AI應用帶動需求。"
     },
     {
       "symbol": "3167",
       "name": "大量",
       "theme": "自動化設備",
       "changePercent": 3.192702394526796,
-      "reason": "營收與訂單持續創新高，短線空方回補推動股價強彈。"
+      "reason": "6月營收年增率高達139.66%，且將於7月9日起納入富時「臺灣中型100指數」與「臺灣發達指數」成分股。"
     },
     {
       "symbol": "6257",
       "name": "矽格",
-      "theme": "IC 測試",
+      "theme": "IC 封測",
       "changePercent": 7.269155206286837,
-      "reason": "AI ASIC、AI Connectivity、矽光子等高階測試需求強勁，產能滿載，客戶積極追單。"
+      "reason": "第二季營收創歷史新高，受惠AI ASIC、矽光子與高速傳輸需求，高階測試產能吃緊。"
     },
     {
       "symbol": "8358",
       "name": "金居",
       "theme": "CCL 銅箔基板",
       "changePercent": -4.576271186440678,
-      "reason": "高階銅箔HVLP3與HVLP4系列受惠NVIDIA Rubin、AMD MI500等AI平台升級需求爆發。"
+      "reason": "近期無明確個股消息，可能受族群輪動帶動。"
     },
     {
       "symbol": "8150",
       "name": "南茂",
-      "theme": "記憶體封測",
+      "theme": "IC 封測",
       "changePercent": 10,
-      "reason": "受惠記憶體封測需求強勁與矽光子題材發酵，第一季財報優於預期，報價調漲帶動毛利率提升。"
+      "reason": "近期無明確個股消息，可能受族群輪動帶動。"
     },
     {
       "symbol": "2301",
       "name": "光寶科",
       "theme": "電源供應器",
       "changePercent": 2.28310502283105,
-      "reason": "AI伺服器電源、備援電池及新一代高功率電源需求快速升溫，法人上調目標價。"
+      "reason": "AI伺服器電源、電力機櫃整合方案陸續放量，管理層看好第二季EPS顯著成長，全年AI產品營收占比目標不變。"
     }
   ],
   "marketBriefing": {
-    "highlights": "本日台股在台積電（2330）的領漲下，早盤一度衝高，但隨後因居高思危賣壓出籠而震盪收跌224.23點，終場以46,556.39點作收，跌幅0.48%，成交金額達1兆196.66億元。資金明顯集中在半導體相關族群，其中面板、記憶體與封測族群表現強勢，而PCB與載板、被動元件則面臨回檔修正。外資持續賣超，投信則呈現買超，顯示內資有承接力道。",
+    "highlights": "本日台股（2026-07-06）成交重點呈現資金在高檔震盪下的快速輪動，大盤終場下跌224.23點，收在46556.39點，跌幅0.48%，成交金額達1.02兆元，顯示市場資金充沛但追價意願不高，轉向尋找新的強勢族群。 外資連三賣，賣超255.04億元，而投信則獨自買超69.08億元，顯示內外資看法分歧。 儘管美股科技股回檔、AI估值過高等疑慮夾擊，但AI雲端加速器需求成長趨勢未變，資金從龍頭硬體擴散至記憶體、載板等高毛利環節，帶動相關個股表現。",
     "eventsPast": [
       {
-        "title": "面板族群強勢上漲，觸控雙雄領軍",
-        "detail": "7月2日電子中游-LCD-STN面板族群由TPK-KY、GIS-KY帶動，類股上漲3.89%，市場看好景氣復甦，資金卡位。"
+        "title": "台股大盤震盪收低，電子權值股表現分歧",
+        "detail": "2026年7月6日，台股加權指數震盪收低115.06點，收在46665.56點，其中台積電上漲，但聯發科、台達電、日月光投控等部分權值股走弱，壓抑大盤表現。"
       },
       {
-        "title": "面板雙虎爆量走強，轉型題材受關注",
-        "detail": "7月6日群創（3481）與友達（2409）儘管上週遭外資大幅調節，但仍吸引買盤進場，股價強勢拉升，市場對其FOPLP扇出型面板級封裝技術及玻璃核心載板專案等轉型題材高度關注。"
+        "title": "外資連三賣，投信獨撐大盤",
+        "detail": "2026年7月6日，外資賣超台股255.04億元，呈現連續三日賣超，而投信則買超69.08億元，三大法人合計賣超283.18億元。"
       },
       {
-        "title": "記憶體與封測報價齊揚，南茂漲停創高",
-        "detail": "7月6日記憶體市場傳出第三季DRAM合約價漲幅上看20%，NAND Flash報價漲幅更達35%至40%。同時，受惠於高階CoWoS、覆晶封裝需求大增及原物料成本墊高，下半年半導體封測報價調漲趨勢明顯，南茂（8150）股價強鎖漲停並創歷史新高。"
+        "title": "PCB與載板族群受利空消息衝擊",
+        "detail": "2026年7月6日，PCB與載板族群受到利空消息衝擊，相關個股賣壓沉重，壓抑大盤走勢。"
       },
       {
-        "title": "特用化學品受惠台積電擴產，中華化漲停",
-        "detail": "7月5日台積電（2330）加大力道擴產能，帶動上游特用化學供應商同樂，中華化（1727）亮燈漲停，並成功取得晶圓代工龍頭7奈米以下先進製程的電子級硫酸供應商認證。"
+        "title": "南亞科6月營收年增逾6倍，創歷史新高",
+        "detail": "2026年7月4日公布，南亞科6月營收達293.88億元，年增621.3%，創下歷史新高，顯示記憶體超級循環確立。"
+      },
+      {
+        "title": "聯電6月營收與第二季營收均創同期次高",
+        "detail": "2026年7月6日，聯電公布6月營收231.25億元，月增0.79%、年增22.85%，改寫歷年同期次高；第二季合併營收687.33億元，季增12.6%、年增16.97%，創近15季高點。"
       }
     ],
     "eventsUpcoming": [
       {
+        "date": "7/8",
+        "title": "台達電法說會",
+        "detail": "台達電（2308）將於7月8日舉行法說會，市場關注其對下半年訂單、產能、產品報價、國際產業脈動及業績展望的看法。"
+      },
+      {
+        "date": "7/10",
+        "title": "南亞科法說會",
+        "detail": "南亞科（2408）將於7月10日舉行法說會，在外電傳出三星電子主導新一輪記憶體漲價攻勢下，南亞科釋出的展望將備受關注。"
+      },
+      {
         "date": "7/16",
         "title": "台積電法說會",
-        "detail": "台積電（2330）法說會將登場，其動向將是影響台股大盤及半導體相關族群的關鍵。"
+        "detail": "台積電（2330）將於7月16日舉行第二季法說會，法人指出這是加權指數能否挑戰50000點大關的關鍵轉折點，聚焦第二季營收及獲利、第三季財測展望、AI需求前景、資本支出是否調升等六大看點。"
       },
       {
-        "date": "7/30",
-        "title": "友達法說會",
-        "detail": "友達（2409）將舉行法說會，會前已進行高階人事與組織調整，強化AI與解決方案布局，預期第三季營運有機會淡季不淡。"
-      },
-      {
-        "date": "本週四",
-        "title": "美股財報季開跑",
-        "detail": "美股財報時間落在7月中旬，將影響台股走勢。"
-      },
-      {
-        "date": "本週",
-        "title": "月營收公布",
-        "detail": "市場焦點將轉向6月營收與第二季財報，建議回歸基本面，聚焦AI、營收成長及旺季受惠族群。"
+        "date": "本週起陸續公布",
+        "title": "上市櫃公司6月營收",
+        "detail": "本週起許多上市櫃公司將陸續公布6月營收，將是台股7月上攻50,000點大關的重要關鍵。"
       }
     ]
   }

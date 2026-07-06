@@ -161,31 +161,40 @@ export async function loadIndustryMap(cache = {}) {
     return map;
   }
 
-  const obj = {};
+  // 從既有快取起手當「上次的好資料」墊底：某端點暫時失敗（曾見 t187ap03_L 回 HTML 錯誤頁，
+  // 與 STOCK_DAY_ALL 同一台 openapi.twse.com.tw 主機一起掛）時，該市場的股數退回上次好值，
+  // 不會整批歸零把上市市值打成 0。抓成功才用新值覆蓋。
+  const obj = { ...(cache.industry ?? {}) };
   const add = (code, sectorCode, shares) => {
     if (!isCommonStock(code)) return;
     obj[code] = { sector: industryName(sectorCode), shares: Number.isFinite(shares) ? shares : 0 };
   };
+  let twseOk = false;
+  let tpexOk = false;
   try {
     const twse = await getJson(TWSE_BASIC);
     for (const r of twse) {
       add(r["公司代號"], r["產業別"], toNum(r["已發行普通股數或TDR原股發行股數"]));
     }
+    twseOk = Array.isArray(twse) && twse.length > 0;
   } catch (e) {
-    console.warn(`  上市基本資料抓取失敗：${e.message}`);
+    console.warn(`  上市基本資料抓取失敗（沿用既有股數）：${e.message}`);
   }
   try {
     const tpex = await getJson(TPEX_BASIC);
     for (const r of tpex) {
       add(r.SecuritiesCompanyCode, r.SecuritiesIndustryCode, toNum(r.IssueShares));
     }
+    tpexOk = Array.isArray(tpex) && tpex.length > 0;
   } catch (e) {
-    console.warn(`  上櫃基本資料抓取失敗：${e.message}`);
+    console.warn(`  上櫃基本資料抓取失敗（沿用既有股數）：${e.message}`);
   }
 
   for (const [k, v] of Object.entries(obj)) map.set(k, v);
   cache.industry = obj;
-  cache.industryFetchedAt = Date.now();
+  // 只有兩市場都抓成功才重設 7 天 TTL；任一失敗 → 不延長快取，下一班仍會重抓，
+  // 避免「殘缺 map 被鎖 7 天」（否則上市市值 0 會持續整整一週）。
+  if (twseOk && tpexOk) cache.industryFetchedAt = Date.now();
   await saveCache(cache);
   return map;
 }
