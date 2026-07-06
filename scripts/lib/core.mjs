@@ -264,23 +264,42 @@ function twseDatedSane(next, prev) {
  * 待 OpenAPI 自己補上才前進）。櫃買只採與上市同日者，確保兩市場不混日。
  */
 export async function fetchAllLatest() {
-  const [twseOA, tpex] = await Promise.all([fetchTwseLatest(), fetchTpexLatest()]);
+  // 韌性：任一 OpenAPI 端點偶爾會回 HTML 錯誤頁 / 截斷 JSON（曾見上市回 `<html>`、上櫃 body
+  // 被切斷），若用 Promise.all，一個 reject 就整包陣亡、連能救場的指定日 MI_INDEX 都跑不到。
+  // 改用 allSettled 各自容錯：上市 STOCK_DAY_ALL 掛了不致命（下方會用指定日 MI_INDEX 補當日）。
+  const [twseR, tpexR] = await Promise.allSettled([fetchTwseLatest(), fetchTpexLatest()]);
+  const twseOA = twseR.status === "fulfilled" ? twseR.value : [];
+  const tpex = tpexR.status === "fulfilled" ? tpexR.value : [];
+  if (twseR.status === "rejected")
+    console.warn(`  上市 STOCK_DAY_ALL OpenAPI 抓取失敗（${twseR.reason}）— 改以指定日 MI_INDEX 補上市當日`);
+  if (tpexR.status === "rejected")
+    console.warn(`  上櫃 OpenAPI 抓取失敗（${tpexR.reason}）`);
+
+  // 上櫃沒有可靠的「指定日」回補來源；缺上櫃就組不出完整跨市場排行，只發上市會整批漏掉櫃買股。
+  // 寧可本班視為失敗 → 保留上一個完整交易日，由下一班（每 30 分）補跑。
+  if (tpex.length === 0)
+    throw new Error("上櫃當日資料缺失，暫不更新（保留前一完整交易日，待下一班補跑）");
+
   const oaDate = twseOA.map((r) => r.date).filter(Boolean).sort().pop();
   const tpexDate = tpex.map((r) => r.date).filter(Boolean).sort().pop();
 
   let twse = twseOA;
   let date = oaDate;
-  // 上市 OpenAPI 落後於櫃買（有更新的交易日可拿）→ 試指定日端點補上市當日。
+  // 上市 OpenAPI 落後於櫃買、或整包抓取失敗（oaDate 為空）→ 用指定日 MI_INDEX 補上市當日。
   if (tpexDate && (!oaDate || tpexDate > oaDate)) {
     const dated = await fetchTwseByDate(tpexDate).catch(() => []);
     if (dated.length > 0 && twseDatedSane(dated, twseOA)) {
       twse = dated;
       date = tpexDate;
-      console.log(`  上市 OpenAPI 落後（${oaDate ?? "無"}），改用指定日端點 ${tpexDate}（已通過漲跌幅合理性檢查）`);
+      console.log(`  上市改用指定日 MI_INDEX ${tpexDate}（OpenAPI ${oaDate ?? "抓取失敗"}，已通過漲跌幅合理性檢查）`);
     } else if (dated.length > 0) {
-      console.warn(`  指定日上市 ${tpexDate} 數值與前一交易日不連續（疑似上游壞檔），暫不採用，維持 ${oaDate}`);
+      console.warn(`  指定日上市 ${tpexDate} 數值與前一交易日不連續（疑似上游壞檔），暫不採用，維持 ${oaDate ?? "無"}`);
     }
   }
+
+  // 上市完全拿不到（OpenAPI 失敗且指定日也沒補到）→ 同樣視為本班失敗，不發半套排行。
+  if (twse.length === 0)
+    throw new Error("上市當日資料缺失，暫不更新（保留前一完整交易日，待下一班補跑）");
 
   date = date ?? tpexDate ?? fmtDate(new Date());
   const rows = [...twse.filter((r) => r.date === date), ...tpex.filter((r) => r.date === date)];
