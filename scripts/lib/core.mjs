@@ -445,6 +445,11 @@ export function rankTop(normRows, industryMap, opts = {}) {
 
 // ───────────────────────── Gemini（題材標籤） ─────────────────────────
 
+// 釘死版本號（不用 gemini-flash-latest 滾動別名）：本管線對輸出格式敏感（市場焦點靠
+// google_search grounding，曾被破 JSON 咬過），釘版本才可重現、升級才可控。
+// 2026-09 實測：升 3.5-flash 時每日 3 通呼叫（題材/新進榜/焦點）只有第一通成功，
+// 其餘撞免費層配額 429 → 新一代模型免費 RPD 太緊，維持 2.5-flash（免費層額度較寬）。
+// 要用 3.x 需先在 Google Cloud 專案開啟計費（付費層）拉高上限。
 export const GEMINI_MODEL = "gemini-2.5-flash";
 
 /** 呼叫 Gemini generateContent，對 429/500/503 退避重試，回傳解析後的回應物件。 */
@@ -518,7 +523,7 @@ ${lines}
 
   const body = {
     contents: [{ parts: [{ text: prompt }] }],
-    // 關掉 gemini-2.5-flash 預設 thinking 並給足輸出上限；結構化輸出不需 thinking。
+    // 關掉 flash 系列預設 thinking 並給足輸出上限；結構化輸出不需 thinking。
     generationConfig: {
       responseMimeType: "application/json",
       responseSchema: schema,
