@@ -105,11 +105,20 @@ jobs:
 
       # snapshot 真失敗（非假日略過，而是來源掛掉/金鑰失效/程式錯誤）時開 issue 通知。
       # 同一時間只保留一張 open issue：已存在就留言，沒有才新開（避免多班重複洗版）。
+      # 台北 14:00–18:20 是每 30 分一班的重試窗口：窗口內單班失敗下一班會補上，不通知
+      # （2026-09～11 曾因此累積 139 則留言，其中絕大多數下一班就已恢復）。只有窗口最後一班
+      # （18:30）或窗口外的補跑班次仍失敗 —— 代表當天真的沒更新到 —— 才通知。
       - name: Notify on snapshot failure
         if: steps.snap.outputs.ok == 'false' && github.ref == 'refs/heads/main'
         uses: actions/github-script@v7
         with:
           script: |
+            const tpe = new Date(Date.now() + 8 * 3600e3);
+            const hm = tpe.getUTCHours() * 60 + tpe.getUTCMinutes();
+            if (hm >= 14 * 60 && hm < 18 * 60 + 20) {
+              core.info("重試窗口內單班失敗，下一班會自動補跑，不通知。");
+              return;
+            }
             const runUrl = `${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`;
             const body = [
               "每日 snapshot 步驟失敗，已改用既有快照部署 —— 網站資料可能未更新。",

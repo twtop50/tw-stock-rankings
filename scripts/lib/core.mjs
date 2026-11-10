@@ -86,8 +86,18 @@ export function formatSector(sector) {
  *     若只 `return res.json()` 會在呼叫端才 reject、繞過本函式的重試 —— 等於重試形同虛設。
  *  2) `Connection: close` + AbortController 逾時：避免 undici 連線池重用到已被對端關閉的
  *     keep-alive 連線，並讓「卡住的 socket」逾時後改走重試，而非永久 hang 或直接致命。
+ *
+ * backoffMs：第 n 次重試前等 backoffMs × n。大檔且常斷的來源（櫃買全市場檔）應給較長的
+ * 逾時與退避 —— 斷線多半持續數十秒，3/6/9 秒的短退避會在同一段壞窗口內把重試次數燒光。
  */
-export async function getJson(url, { timeoutMs = 25_000, retries = 4 } = {}) {
+export async function getJson(url, { timeoutMs = 25_000, retries = 4, backoffMs = 3_000 } = {}) {
+  const host = (() => {
+    try {
+      return new URL(url).host;
+    } catch {
+      return url;
+    }
+  })();
   for (let attempt = 0; ; attempt++) {
     const ac = new AbortController();
     const timer = setTimeout(() => ac.abort(), timeoutMs);
@@ -101,14 +111,16 @@ export async function getJson(url, { timeoutMs = 25_000, retries = 4 } = {}) {
         signal: ac.signal,
       });
       if (res.ok) return await res.json();
-      if ((res.status === 429 || res.status >= 500) && attempt < retries - 1) {
-        await sleep(3_000 * (attempt + 1));
-        continue;
-      }
       throw new Error(`HTTP ${res.status} for ${url}`);
     } catch (e) {
+      // undici 的 `fetch failed` / `terminated` 把真正原因（ECONNRESET、逾時…）藏在 cause，
+      // 帶進訊息才能從 log 分辨是連不上、被切斷還是太慢。
+      const why = e?.name === "AbortError" ? `逾時 ${timeoutMs / 1000}s` : e?.cause?.code || e?.cause?.message;
+      if (why && !String(e.message).includes(why)) e.message = `${e.message} (${why})`;
       if (attempt < retries - 1) {
-        await sleep(3_000 * (attempt + 1));
+        const wait = backoffMs * (attempt + 1);
+        console.warn(`  ${host} 抓取失敗：${e.message}；${wait / 1000}s 後重試（第 ${attempt + 1}/${retries - 1} 次）`);
+        await sleep(wait);
         continue;
       }
       throw e;
@@ -241,7 +253,10 @@ export async function fetchTwseLatest() {
   return (Array.isArray(data) ? data : []).map(normTwse).filter(keepRow);
 }
 export async function fetchTpexLatest() {
-  const data = await getJson(TPEX_DAY_ALL);
+  // 櫃買全市場檔含權證等共 1.3 萬筆（解壓後 ~5MB），從 GitHub Actions（美國機房）抓常被切斷或
+  // 逾時（2026-09～11 的 snapshot 失敗 100% 是這支）。給足逾時與長退避：最壞約 6～7 分鐘，
+  // 仍在每 30 分一班的間隔內，且同一班內撐過斷線窗口比等下一班快得多。
+  const data = await getJson(TPEX_DAY_ALL, { timeoutMs: 60_000, retries: 5, backoffMs: 10_000 });
   return (Array.isArray(data) ? data : []).map(normTpex).filter(keepRow);
 }
 

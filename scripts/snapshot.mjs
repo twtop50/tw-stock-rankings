@@ -211,34 +211,63 @@ ${themeLines}
   return out;
 }
 
+/** 台北現在的日期（YYYY-MM-DD）與小時。 */
+function taipeiNow() {
+  const t = new Date(Date.now() + 8 * 3_600_000);
+  return { date: t.toISOString().slice(0, 10), hour: t.getUTCHours() };
+}
+
+/** ds 的前一個平日（不含國定假日判斷；遇連假會多抓一次，無害）。 */
+function prevWeekday(ds) {
+  const d = new Date(`${ds}T00:00:00Z`);
+  do d.setUTCDate(d.getUTCDate() - 1);
+  while (d.getUTCDay() === 0 || d.getUTCDay() === 6);
+  return d.toISOString().slice(0, 10);
+}
+
 async function main() {
   const geminiKey = await readKey("GEMINI_API_KEY");
+
+  // 失敗補跑 + 省成本：若「此交易日」資料已完整產生（有金鑰時需含 AI 市場焦點），直接結束。
+  // 使每 30 分一班的多次排程只在第一次真正運算、其餘快速略過；某班 AI 失敗時下一班會自動重試補上。
+  // 以環境變數 FORCE=1 可強制重算（手動需要時用）。
+  //
+  // 有金鑰時，必須已產出「今日市場焦點」(marketBriefing) 才算完成。它最易因 grounded 回應
+  // JSON 破損而失敗；若改用「焦點或題材其一」當完成條件，會讓失敗的焦點被永久略過、再也不補。
+  let published = null;
+  if (!process.env.FORCE) {
+    try {
+      published = JSON.parse(await fs.readFile(OUT_FILE, "utf8"));
+    } catch {
+      // 無既有檔或解析失敗 → 照常產生。
+    }
+  }
+  const pubDate = typeof published?.asOf === "string" ? published.asOf.slice(0, 10) : "";
+  const pubDone =
+    !!published && (published.rows?.length ?? 0) > 0 && (geminiKey ? !!published.marketBriefing : true);
+
+  // 先判斷「根本不需要抓」再碰網路：2026-09～11 的 139 次 snapshot 失敗中有 55 次發生在
+  // 當天早已發布之後 —— 後續班次仍去下載上櫃 5MB 全市場檔、被切斷就記一次失敗，純屬雜訊。
+  //  - 今天的資料已完整 → 不用抓。
+  //  - 收盤資料公布前（台北 14 點前，夜間延遲班次）且已有上一個平日的完整資料 → 不可能有新資料。
+  //    （若上一個平日沒更新到，則照常抓，讓夜間班次有機會補回。）
+  if (pubDone) {
+    const now = taipeiNow();
+    if (pubDate === now.date || (now.hour < 14 && pubDate === prevWeekday(now.date))) {
+      console.log(`最新資料（${pubDate}）已完整，無新資料可抓，略過（補跑機制）。`);
+      return;
+    }
+  }
 
   console.log("抓取上市＋上櫃當日全市場成交資料…");
   const { date, rows: allRows } = await fetchAllLatest();
   if (allRows.length === 0) throw new Error("找不到可用的台股當日資料（可能為假日或來源暫時無回應）");
   console.log(`最新交易日：${date}（上市＋上櫃共 ${allRows.length} 檔個股）`);
 
-  // 失敗補跑 + 省成本：若「此交易日」資料已完整產生（有金鑰時需含 AI 市場焦點），直接結束。
-  // 使每 30 分一班的多次排程只在第一次真正運算、其餘快速略過；某班 AI 失敗時下一班會自動重試補上。
-  // 以環境變數 FORCE=1 可強制重算（手動需要時用）。
-  if (!process.env.FORCE) {
-    try {
-      const prev = JSON.parse(await fs.readFile(OUT_FILE, "utf8"));
-      const prevDate = typeof prev.asOf === "string" ? prev.asOf.slice(0, 10) : "";
-      const hasRows = (prev.rows?.length ?? 0) > 0;
-      // 有金鑰時，必須已產出「今日市場焦點」(marketBriefing) 才算完成。它最易因 grounded
-      // 回應 JSON 破損而失敗；若改用「焦點或題材其一」當完成條件，會讓失敗的市場焦點被永久
-      // 略過、再也不補。多班次（cron-job.org 15:30/16:30/17:30）會逐班重試直到焦點產出；
-      // 即使某天始終失敗，最多也只重跑 3 班，不致狂打 429。
-      const aiDone = geminiKey ? !!prev.marketBriefing : hasRows;
-      if (prevDate === date && hasRows && aiDone) {
-        console.log(`今日（${date}）資料已完整，略過重算（補跑機制）。`);
-        return;
-      }
-    } catch {
-      // 無既有檔或解析失敗 → 照常產生。
-    }
+  // 抓完才知道來源最新日仍是已完成的那天（盤後尚未公布、或假日）→ 略過。
+  if (pubDone && pubDate === date) {
+    console.log(`今日（${date}）資料已完整，略過重算（補跑機制）。`);
+    return;
   }
 
   const cache = await loadCache();
