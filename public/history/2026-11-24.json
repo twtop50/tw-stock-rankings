@@ -1,0 +1,1097 @@
+{
+  "rows": [
+    {
+      "symbol": "2330",
+      "market": "twse",
+      "name": "台積電",
+      "price": 2230,
+      "changePercent": 9.852216748768473,
+      "dollarVolume": 29465076970,
+      "marketCap": 57829185249410,
+      "sector": "半導體業",
+      "theme": "CoWoS 先進封裝",
+      "isNew": false,
+      "rankChange": 0,
+      "streak": 171
+    },
+    {
+      "symbol": "3006",
+      "market": "twse",
+      "name": "晶豪科",
+      "price": 183.5,
+      "changePercent": -4.177545691906006,
+      "dollarVolume": 12692990195,
+      "marketCap": 54706458823.5,
+      "sector": "半導體業",
+      "theme": "記憶體",
+      "isNew": true,
+      "rankChange": null,
+      "streak": 1
+    },
+    {
+      "symbol": "2603",
+      "market": "twse",
+      "name": "長榮",
+      "price": 257,
+      "changePercent": 9.594882729211088,
+      "dollarVolume": 11020616792,
+      "marketCap": 556416049972,
+      "sector": "航運業",
+      "theme": "貨櫃航運",
+      "isNew": false,
+      "rankChange": 38,
+      "streak": 3
+    },
+    {
+      "symbol": "2412",
+      "market": "twse",
+      "name": "中華電",
+      "price": 164.5,
+      "changePercent": 0,
+      "dollarVolume": 10368344534,
+      "marketCap": 1276099956652.5,
+      "sector": "通信網路業",
+      "theme": "電信",
+      "isNew": false,
+      "rankChange": 33,
+      "streak": 4
+    },
+    {
+      "symbol": "3529",
+      "market": "tpex",
+      "name": "力旺",
+      "price": 2025,
+      "changePercent": 6.860158311345646,
+      "dollarVolume": 8735916630,
+      "marketCap": 151240146300,
+      "sector": "半導體業",
+      "theme": "IP 矽智財",
+      "isNew": true,
+      "rankChange": null,
+      "streak": 1
+    },
+    {
+      "symbol": "2382",
+      "market": "twse",
+      "name": "廣達",
+      "price": 282.5,
+      "changePercent": 9.922178988326849,
+      "dollarVolume": 7027372214,
+      "marketCap": 1160404749540,
+      "sector": "電腦及週邊設備業",
+      "theme": "AI 伺服器",
+      "isNew": true,
+      "rankChange": null,
+      "streak": 1
+    },
+    {
+      "symbol": "6505",
+      "market": "twse",
+      "name": "台塑化",
+      "price": 80.3,
+      "changePercent": -1.7135862913096693,
+      "dollarVolume": 6957285297,
+      "marketCap": 764934560055.6,
+      "sector": "油電燃氣業",
+      "theme": "塑化",
+      "isNew": true,
+      "rankChange": null,
+      "streak": 1
+    },
+    {
+      "symbol": "6456",
+      "market": "twse",
+      "name": "GIS-KY",
+      "price": 64.8,
+      "changePercent": -0.6134969325153374,
+      "dollarVolume": 5989388636,
+      "marketCap": 21898499040,
+      "sector": "光電業",
+      "theme": "光學元件",
+      "isNew": true,
+      "rankChange": null,
+      "streak": 1
+    },
+    {
+      "symbol": "2379",
+      "market": "twse",
+      "name": "瑞昱",
+      "price": 694,
+      "changePercent": 4.2042042042042045,
+      "dollarVolume": 5805687703,
+      "marketCap": 357765772854,
+      "sector": "半導體業",
+      "theme": "網通晶片",
+      "isNew": true,
+      "rankChange": null,
+      "streak": 1
+    },
+    {
+      "symbol": "6446",
+      "market": "twse",
+      "name": "藥華藥",
+      "price": 1150,
+      "changePercent": 2.6785714285714284,
+      "dollarVolume": 5782440995,
+      "marketCap": 485809031400,
+      "sector": "生技醫療業",
+      "theme": "生技新藥",
+      "isNew": true,
+      "rankChange": null,
+      "streak": 1
+    },
+    {
+      "symbol": "2454",
+      "market": "twse",
+      "name": "聯發科",
+      "price": 4050,
+      "changePercent": 9.905020352781547,
+      "dollarVolume": 5596257600,
+      "marketCap": 6499941823350,
+      "sector": "半導體業",
+      "theme": "手機晶片",
+      "isNew": false,
+      "rankChange": -9,
+      "streak": 171
+    },
+    {
+      "symbol": "2357",
+      "market": "twse",
+      "name": "華碩",
+      "price": 821,
+      "changePercent": 8.311345646437996,
+      "dollarVolume": 5365900673,
+      "marketCap": 609806189880,
+      "sector": "電腦及週邊設備業",
+      "theme": "AI PC",
+      "isNew": true,
+      "rankChange": null,
+      "streak": 1
+    },
+    {
+      "symbol": "3034",
+      "market": "twse",
+      "name": "聯詠",
+      "price": 435.5,
+      "changePercent": 1.0440835266821344,
+      "dollarVolume": 4977083639,
+      "marketCap": 266313244749.5,
+      "sector": "半導體業",
+      "theme": "驅動 IC",
+      "isNew": true,
+      "rankChange": null,
+      "streak": 1
+    },
+    {
+      "symbol": "8069",
+      "market": "tpex",
+      "name": "元太",
+      "price": 129,
+      "changePercent": 6.6115702479338845,
+      "dollarVolume": 4943607103,
+      "marketCap": 148953511020,
+      "sector": "光電業",
+      "theme": "電子紙",
+      "isNew": true,
+      "rankChange": null,
+      "streak": 1
+    },
+    {
+      "symbol": "2882",
+      "market": "twse",
+      "name": "國泰金",
+      "price": 104.5,
+      "changePercent": 10,
+      "dollarVolume": 4911469092,
+      "marketCap": 1532932458376,
+      "sector": "金融保險",
+      "theme": "金融",
+      "isNew": true,
+      "rankChange": null,
+      "streak": 1
+    },
+    {
+      "symbol": "2891",
+      "market": "twse",
+      "name": "中信金",
+      "price": 69.9,
+      "changePercent": 9.561128526645767,
+      "dollarVolume": 4873355444,
+      "marketCap": 1375347703139.4001,
+      "sector": "金融保險",
+      "theme": "金融",
+      "isNew": false,
+      "rankChange": 16,
+      "streak": 4
+    },
+    {
+      "symbol": "2317",
+      "market": "twse",
+      "name": "鴻海",
+      "price": 226.5,
+      "changePercent": 9.951456310679612,
+      "dollarVolume": 4401848616,
+      "marketCap": 3188156581570.5,
+      "sector": "其他電子業",
+      "theme": "AI 伺服器",
+      "isNew": false,
+      "rankChange": -5,
+      "streak": 41
+    },
+    {
+      "symbol": "2618",
+      "market": "twse",
+      "name": "長榮航",
+      "price": 48.6,
+      "changePercent": 9.95475113122172,
+      "dollarVolume": 4205607592,
+      "marketCap": 262461594681,
+      "sector": "航運業",
+      "theme": "航空",
+      "isNew": true,
+      "rankChange": null,
+      "streak": 1
+    },
+    {
+      "symbol": "2303",
+      "market": "twse",
+      "name": "聯電",
+      "price": 97.1,
+      "changePercent": 9.966024915062288,
+      "dollarVolume": 4019273735,
+      "marketCap": 1220500438608,
+      "sector": "半導體業",
+      "theme": "晶圓代工",
+      "isNew": false,
+      "rankChange": -13,
+      "streak": 152
+    },
+    {
+      "symbol": "2466",
+      "market": "twse",
+      "name": "冠西電",
+      "price": 383,
+      "changePercent": -9.9882491186839,
+      "dollarVolume": 3969094999,
+      "marketCap": 66434680951,
+      "sector": "光電業",
+      "theme": "電源供應器",
+      "isNew": true,
+      "rankChange": null,
+      "streak": 1
+    },
+    {
+      "symbol": "2881",
+      "market": "twse",
+      "name": "富邦金",
+      "price": 143.5,
+      "changePercent": 9.961685823754788,
+      "dollarVolume": 3805301560,
+      "marketCap": 2010056870612,
+      "sector": "金融保險",
+      "theme": "金融",
+      "isNew": false,
+      "rankChange": 21,
+      "streak": 4
+    },
+    {
+      "symbol": "3711",
+      "market": "twse",
+      "name": "日月光投控",
+      "price": 530,
+      "changePercent": 9.95850622406639,
+      "dollarVolume": 3551884570,
+      "marketCap": 2378687298790,
+      "sector": "半導體業",
+      "theme": "封測",
+      "isNew": false,
+      "rankChange": -9,
+      "streak": 31
+    },
+    {
+      "symbol": "2892",
+      "market": "twse",
+      "name": "第一金",
+      "price": 39.8,
+      "changePercent": 5.710491367861885,
+      "dollarVolume": 3482211020,
+      "marketCap": 572302852270,
+      "sector": "金融保險",
+      "theme": "金融",
+      "isNew": true,
+      "rankChange": null,
+      "streak": 1
+    },
+    {
+      "symbol": "2468",
+      "market": "twse",
+      "name": "華經",
+      "price": 66.4,
+      "changePercent": 2.311248073959938,
+      "dollarVolume": 3165898738,
+      "marketCap": 4645426933.6,
+      "sector": "資訊服務業",
+      "theme": "資訊服務",
+      "isNew": true,
+      "rankChange": null,
+      "streak": 1
+    },
+    {
+      "symbol": "2615",
+      "market": "twse",
+      "name": "萬海",
+      "price": 97.1,
+      "changePercent": 1.040582726326743,
+      "dollarVolume": 2978427285,
+      "marketCap": 272476805050.3,
+      "sector": "航運業",
+      "theme": "貨櫃航運",
+      "isNew": true,
+      "rankChange": null,
+      "streak": 1
+    },
+    {
+      "symbol": "1301",
+      "market": "twse",
+      "name": "台塑",
+      "price": 60.9,
+      "changePercent": 7.21830985915493,
+      "dollarVolume": 2919123114,
+      "marketCap": 387673613562.89996,
+      "sector": "塑膠工業",
+      "theme": "塑化",
+      "isNew": true,
+      "rankChange": null,
+      "streak": 1
+    },
+    {
+      "symbol": "3260",
+      "market": "tpex",
+      "name": "威剛",
+      "price": 271,
+      "changePercent": 8.617234468937877,
+      "dollarVolume": 2886358358,
+      "marketCap": 96601586278,
+      "sector": "半導體業",
+      "theme": "記憶體",
+      "isNew": true,
+      "rankChange": null,
+      "streak": 1
+    },
+    {
+      "symbol": "2449",
+      "market": "twse",
+      "name": "京元電子",
+      "price": 172.5,
+      "changePercent": 9.872611464968154,
+      "dollarVolume": 2730264326,
+      "marketCap": 221469699855,
+      "sector": "半導體業",
+      "theme": "封測",
+      "isNew": false,
+      "rankChange": 20,
+      "streak": 2
+    },
+    {
+      "symbol": "9933",
+      "market": "twse",
+      "name": "中鼎",
+      "price": 54,
+      "changePercent": 4.046242774566474,
+      "dollarVolume": 2636087626,
+      "marketCap": 51948632772,
+      "sector": "其他",
+      "theme": "工程承攬",
+      "isNew": true,
+      "rankChange": null,
+      "streak": 1
+    },
+    {
+      "symbol": "2884",
+      "market": "twse",
+      "name": "玉山金",
+      "price": 41.2,
+      "changePercent": 6.459948320413436,
+      "dollarVolume": 2555496297,
+      "marketCap": 730208631405.2001,
+      "sector": "金融保險",
+      "theme": "金融",
+      "isNew": true,
+      "rankChange": null,
+      "streak": 1
+    },
+    {
+      "symbol": "2887",
+      "market": "twse",
+      "name": "台新新光金",
+      "price": 36.3,
+      "changePercent": 10,
+      "dollarVolume": 2490726307,
+      "marketCap": 911676750491.1,
+      "sector": "金融保險",
+      "theme": "金融",
+      "isNew": true,
+      "rankChange": null,
+      "streak": 1
+    },
+    {
+      "symbol": "2049",
+      "market": "twse",
+      "name": "上銀",
+      "price": 273,
+      "changePercent": 2.4390243902439024,
+      "dollarVolume": 2481586153,
+      "marketCap": 96585281520,
+      "sector": "電機機械",
+      "theme": "自動化設備",
+      "isNew": true,
+      "rankChange": null,
+      "streak": 1
+    },
+    {
+      "symbol": "3293",
+      "market": "tpex",
+      "name": "鈊象",
+      "price": 786,
+      "changePercent": 4.105960264900662,
+      "dollarVolume": 2451838541,
+      "marketCap": 221496026160,
+      "sector": "文化創意業",
+      "theme": "遊戲",
+      "isNew": true,
+      "rankChange": null,
+      "streak": 1
+    },
+    {
+      "symbol": "2610",
+      "market": "twse",
+      "name": "華航",
+      "price": 22.5,
+      "changePercent": 6.635071090047393,
+      "dollarVolume": 2252903593,
+      "marketCap": 138262242555,
+      "sector": "航運業",
+      "theme": "航空",
+      "isNew": true,
+      "rankChange": null,
+      "streak": 1
+    },
+    {
+      "symbol": "2609",
+      "market": "twse",
+      "name": "陽明",
+      "price": 56.3,
+      "changePercent": 3.302752293577982,
+      "dollarVolume": 2214952992,
+      "marketCap": 196605470401,
+      "sector": "航運業",
+      "theme": "貨櫃航運",
+      "isNew": true,
+      "rankChange": null,
+      "streak": 1
+    },
+    {
+      "symbol": "2474",
+      "market": "twse",
+      "name": "可成",
+      "price": 206,
+      "changePercent": 6.7357512953367875,
+      "dollarVolume": 2166805422,
+      "marketCap": 110997140008,
+      "sector": "其他電子業",
+      "theme": "機殼",
+      "isNew": true,
+      "rankChange": null,
+      "streak": 1
+    },
+    {
+      "symbol": "2886",
+      "market": "twse",
+      "name": "兆豐金",
+      "price": 55,
+      "changePercent": 10,
+      "dollarVolume": 2154406804,
+      "marketCap": 815835805510,
+      "sector": "金融保險",
+      "theme": "金融",
+      "isNew": true,
+      "rankChange": null,
+      "streak": 1
+    },
+    {
+      "symbol": "5871",
+      "market": "twse",
+      "name": "中租-KY",
+      "price": 103.5,
+      "changePercent": 7.142857142857144,
+      "dollarVolume": 2090161800,
+      "marketCap": 180674731944,
+      "sector": "其他",
+      "theme": "租賃",
+      "isNew": true,
+      "rankChange": null,
+      "streak": 1
+    },
+    {
+      "symbol": "2027",
+      "market": "twse",
+      "name": "大成鋼",
+      "price": 48.15,
+      "changePercent": 7.597765363128492,
+      "dollarVolume": 2061344333,
+      "marketCap": 124432148612.25,
+      "sector": "鋼鐵工業",
+      "theme": "鋼鐵",
+      "isNew": true,
+      "rankChange": null,
+      "streak": 1
+    },
+    {
+      "symbol": "3045",
+      "market": "twse",
+      "name": "台灣大",
+      "price": 125.5,
+      "changePercent": 2.0325203252032518,
+      "dollarVolume": 1937505607,
+      "marketCap": 467290592382.5,
+      "sector": "通信網路業",
+      "theme": "電信",
+      "isNew": true,
+      "rankChange": null,
+      "streak": 1
+    },
+    {
+      "symbol": "1303",
+      "market": "twse",
+      "name": "南亞",
+      "price": 249,
+      "changePercent": 9.933774834437086,
+      "dollarVolume": 1846694307,
+      "marketCap": 1974774575661,
+      "sector": "塑膠工業",
+      "theme": "塑化",
+      "isNew": false,
+      "rankChange": -36,
+      "streak": 77
+    },
+    {
+      "symbol": "1216",
+      "market": "twse",
+      "name": "統一",
+      "price": 77.4,
+      "changePercent": 2.516556291390728,
+      "dollarVolume": 1753141670,
+      "marketCap": 439787993585.4,
+      "sector": "食品工業",
+      "theme": "食品",
+      "isNew": true,
+      "rankChange": null,
+      "streak": 1
+    },
+    {
+      "symbol": "6199",
+      "market": "tpex",
+      "name": "天品",
+      "price": 173,
+      "changePercent": 0.2898550724637681,
+      "dollarVolume": 1741725833,
+      "marketCap": 10684483114,
+      "sector": "其他",
+      "theme": "殯葬",
+      "isNew": true,
+      "rankChange": null,
+      "streak": 1
+    },
+    {
+      "symbol": "2308",
+      "market": "twse",
+      "name": "台達電",
+      "price": 1085,
+      "changePercent": 9.595959595959595,
+      "dollarVolume": 1726252360,
+      "marketCap": 2818334511965,
+      "sector": "電子零組件業",
+      "theme": "電源管理",
+      "isNew": false,
+      "rankChange": -40,
+      "streak": 171
+    },
+    {
+      "symbol": "3036",
+      "market": "twse",
+      "name": "文曄",
+      "price": 172.5,
+      "changePercent": 6.811145510835913,
+      "dollarVolume": 1708233806,
+      "marketCap": 232109565922.5,
+      "sector": "電子通路業",
+      "theme": "電子通路",
+      "isNew": true,
+      "rankChange": null,
+      "streak": 1
+    },
+    {
+      "symbol": "3035",
+      "market": "twse",
+      "name": "智原",
+      "price": 178,
+      "changePercent": 6.906906906906906,
+      "dollarVolume": 1642474689,
+      "marketCap": 46377955714,
+      "sector": "半導體業",
+      "theme": "IP 矽智財",
+      "isNew": true,
+      "rankChange": null,
+      "streak": 1
+    },
+    {
+      "symbol": "3702",
+      "market": "twse",
+      "name": "大聯大",
+      "price": 77.7,
+      "changePercent": 3.187250996015936,
+      "dollarVolume": 1594622445,
+      "marketCap": 136081783653.90001,
+      "sector": "電子通路業",
+      "theme": "電子通路",
+      "isNew": true,
+      "rankChange": null,
+      "streak": 1
+    },
+    {
+      "symbol": "2890",
+      "market": "twse",
+      "name": "永豐金",
+      "price": 40.35,
+      "changePercent": 9.94550408719346,
+      "dollarVolume": 1550825217,
+      "marketCap": 596460507892.35,
+      "sector": "金融保險",
+      "theme": "金融",
+      "isNew": true,
+      "rankChange": null,
+      "streak": 1
+    },
+    {
+      "symbol": "7765",
+      "market": "twse",
+      "name": "中華資安",
+      "price": 283,
+      "changePercent": 4.814814814814815,
+      "dollarVolume": 1423384930,
+      "marketCap": 11512723000,
+      "sector": "數位雲端",
+      "theme": "資安",
+      "isNew": true,
+      "rankChange": null,
+      "streak": 1
+    },
+    {
+      "symbol": "2376",
+      "market": "twse",
+      "name": "技嘉",
+      "price": 278,
+      "changePercent": 9.881422924901186,
+      "dollarVolume": 1419748224,
+      "marketCap": 200129110308,
+      "sector": "電腦及週邊設備業",
+      "theme": "AI 伺服器",
+      "isNew": true,
+      "rankChange": null,
+      "streak": 1
+    }
+  ],
+  "asOf": "2026-11-24T13:30:00+08:00",
+  "generatedAt": "2026-11-24T10:32:04.280Z",
+  "source": "twse",
+  "aiSource": "gemini",
+  "themeSummary": [
+    {
+      "theme": "金融",
+      "reason": "受惠於升息循環與股市交投熱絡，金融股獲利表現亮眼，吸引資金追捧。",
+      "symbols": [
+        "2882",
+        "2891",
+        "2881",
+        "2892",
+        "2884",
+        "2887",
+        "2886",
+        "2890"
+      ],
+      "count": 8,
+      "avgChange": 8.954844765733668
+    },
+    {
+      "theme": "AI 伺服器",
+      "reason": "全球AI需求持續爆發，AI伺服器相關供應鏈訂單能見度高，市場對其成長前景抱持樂觀態度。",
+      "symbols": [
+        "2382",
+        "2317",
+        "2376"
+      ],
+      "count": 3,
+      "avgChange": 9.918352741302549
+    },
+    {
+      "theme": "CoWoS 先進封裝",
+      "reason": "AI晶片對先進封裝技術需求孔急，台積電作為領頭羊，其擴產計畫帶動相關供應鏈受惠。",
+      "symbols": [
+        "2330"
+      ],
+      "count": 1,
+      "avgChange": 9.852216748768473
+    },
+    {
+      "theme": "貨櫃航運",
+      "reason": "紅海危機持續影響全球航運供應鏈，運價上漲預期帶動航運股表現。",
+      "symbols": [
+        "2603",
+        "2615",
+        "2609"
+      ],
+      "count": 3,
+      "avgChange": 4.646072583038604
+    },
+    {
+      "theme": "塑化",
+      "reason": "國際油價波動及石化產品需求回溫，帶動塑化類股表現。",
+      "symbols": [
+        "1301",
+        "1303"
+      ],
+      "count": 2,
+      "avgChange": 8.576042346796008
+    },
+    {
+      "theme": "IP 矽智財",
+      "reason": "AI、HPC等新興應用推升晶片設計複雜度，IP矽智財需求持續增長，具高毛利優勢。",
+      "symbols": [
+        "3529",
+        "3035"
+      ],
+      "count": 2,
+      "avgChange": 6.883532609126276
+    }
+  ],
+  "newEntrants": [
+    {
+      "symbol": "3006",
+      "name": "晶豪科",
+      "theme": "記憶體",
+      "changePercent": -4.177545691906006,
+      "reason": "近期無明確個股消息，可能受族群輪動帶動。"
+    },
+    {
+      "symbol": "3529",
+      "name": "力旺",
+      "theme": "IP 矽智財",
+      "changePercent": 6.860158311345646,
+      "reason": "第三季營收獲利創新高，晶片安全業務年增逾200%，外資調升目標價。"
+    },
+    {
+      "symbol": "2382",
+      "name": "廣達",
+      "theme": "AI 伺服器",
+      "changePercent": 9.922178988326849,
+      "reason": "近期無明確個股消息，可能受AI伺服器題材輪動帶動。"
+    },
+    {
+      "symbol": "6505",
+      "name": "台塑化",
+      "theme": "塑化",
+      "changePercent": -1.7135862913096693,
+      "reason": "近期無明確個股消息，可能受族群輪動帶動。"
+    },
+    {
+      "symbol": "6456",
+      "name": "GIS-KY",
+      "theme": "光學元件",
+      "changePercent": -0.6134969325153374,
+      "reason": "近期無明確個股消息，可能受族群輪動帶動。"
+    },
+    {
+      "symbol": "2379",
+      "name": "瑞昱",
+      "theme": "網通晶片",
+      "changePercent": 4.2042042042042045,
+      "reason": "近期無明確個股消息，可能受族群輪動帶動。"
+    },
+    {
+      "symbol": "6446",
+      "name": "藥華藥",
+      "theme": "生技新藥",
+      "changePercent": 2.6785714285714284,
+      "reason": "近期無明確個股消息，可能受族群輪動帶動。"
+    },
+    {
+      "symbol": "2357",
+      "name": "華碩",
+      "theme": "AI PC",
+      "changePercent": 8.311345646437996,
+      "reason": "近期無明確個股消息，可能受AI PC題材輪動帶動。"
+    },
+    {
+      "symbol": "3034",
+      "name": "聯詠",
+      "theme": "驅動 IC",
+      "changePercent": 1.0440835266821344,
+      "reason": "近期無明確個股消息，可能受族群輪動帶動。"
+    },
+    {
+      "symbol": "8069",
+      "name": "元太",
+      "theme": "電子紙",
+      "changePercent": 6.6115702479338845,
+      "reason": "推出升級版九色電子紙技術，並有大型彩色電子紙看板落地應用。"
+    },
+    {
+      "symbol": "2882",
+      "name": "國泰金",
+      "theme": "金融",
+      "changePercent": 10,
+      "reason": "近期無明確個股消息，可能受金融股族群輪動帶動。"
+    },
+    {
+      "symbol": "2618",
+      "name": "長榮航",
+      "theme": "航空",
+      "changePercent": 9.95475113122172,
+      "reason": "10月貨運營收年增逾四成，全球航空運價連漲七周。"
+    },
+    {
+      "symbol": "2466",
+      "name": "冠西電",
+      "theme": "電源供應器",
+      "changePercent": -9.9882491186839,
+      "reason": "近期無明確個股消息，可能受族群輪動帶動。"
+    },
+    {
+      "symbol": "2892",
+      "name": "第一金",
+      "theme": "金融",
+      "changePercent": 5.710491367861885,
+      "reason": "金融股資金焦點不減，市場關注其長線佈局空間。"
+    },
+    {
+      "symbol": "2468",
+      "name": "華經",
+      "theme": "資訊服務",
+      "changePercent": 2.311248073959938,
+      "reason": "近期無明確個股消息，可能受族群輪動帶動。"
+    },
+    {
+      "symbol": "2615",
+      "name": "萬海",
+      "theme": "貨櫃航運",
+      "changePercent": 1.040582726326743,
+      "reason": "近期無明確個股消息，可能受貨櫃航運族群輪動帶動。"
+    },
+    {
+      "symbol": "1301",
+      "name": "台塑",
+      "theme": "塑化",
+      "changePercent": 7.21830985915493,
+      "reason": "近期無明確個股消息，可能受族群輪動帶動。"
+    },
+    {
+      "symbol": "3260",
+      "name": "威剛",
+      "theme": "記憶體",
+      "changePercent": 8.617234468937877,
+      "reason": "完成300億元永續聯貸案簽約，獲9家金融機構超額認購。"
+    },
+    {
+      "symbol": "9933",
+      "name": "中鼎",
+      "theme": "工程承攬",
+      "changePercent": 4.046242774566474,
+      "reason": "近期無明確個股消息，可能受族群輪動帶動。"
+    },
+    {
+      "symbol": "2884",
+      "name": "玉山金",
+      "theme": "金融",
+      "changePercent": 6.459948320413436,
+      "reason": "近期無明確個股消息，可能受金融股族群輪動帶動。"
+    },
+    {
+      "symbol": "2887",
+      "name": "台新新光金",
+      "theme": "金融",
+      "changePercent": 10,
+      "reason": "近期無明確個股消息，可能受金融股族群輪動帶動。"
+    },
+    {
+      "symbol": "2049",
+      "name": "上銀",
+      "theme": "自動化設備",
+      "changePercent": 2.4390243902439024,
+      "reason": "近期無明確個股消息，可能受族群輪動帶動。"
+    },
+    {
+      "symbol": "3293",
+      "name": "鈊象",
+      "theme": "遊戲",
+      "changePercent": 4.105960264900662,
+      "reason": "近期無明確個股消息，可能受族群輪動帶動。"
+    },
+    {
+      "symbol": "2610",
+      "name": "華航",
+      "theme": "航空",
+      "changePercent": 6.635071090047393,
+      "reason": "10月貨運營收年增逾48%，年底空運運價續漲，法人看好旺季行情。"
+    },
+    {
+      "symbol": "2609",
+      "name": "陽明",
+      "theme": "貨櫃航運",
+      "changePercent": 3.302752293577982,
+      "reason": "全球貨櫃航運塞港持續，運價維持高檔，法人看好。"
+    },
+    {
+      "symbol": "2474",
+      "name": "可成",
+      "theme": "機殼",
+      "changePercent": 6.7357512953367875,
+      "reason": "近期無明確個股消息，可能受族群輪動帶動。"
+    },
+    {
+      "symbol": "2886",
+      "name": "兆豐金",
+      "theme": "金融",
+      "changePercent": 10,
+      "reason": "近期無明確個股消息，可能受金融股族群輪動帶動。"
+    },
+    {
+      "symbol": "5871",
+      "name": "中租-KY",
+      "theme": "租賃",
+      "changePercent": 7.142857142857144,
+      "reason": "近期無明確個股消息，可能受族群輪動帶動。"
+    },
+    {
+      "symbol": "2027",
+      "name": "大成鋼",
+      "theme": "鋼鐵",
+      "changePercent": 7.597765363128492,
+      "reason": "受惠AI擴廠需求發酵，前三季EPS翻倍成長，德州新產線全開。"
+    },
+    {
+      "symbol": "3045",
+      "name": "台灣大",
+      "theme": "電信",
+      "changePercent": 2.0325203252032518,
+      "reason": "近期無明確個股消息，可能受族群輪動帶動。"
+    },
+    {
+      "symbol": "1216",
+      "name": "統一",
+      "theme": "食品",
+      "changePercent": 2.516556291390728,
+      "reason": "近期無明確個股消息，可能受族群輪動帶動。"
+    },
+    {
+      "symbol": "6199",
+      "name": "天品",
+      "theme": "殯葬",
+      "changePercent": 0.2898550724637681,
+      "reason": "近期無明確個股消息，可能受族群輪動帶動。"
+    },
+    {
+      "symbol": "3036",
+      "name": "文曄",
+      "theme": "電子通路",
+      "changePercent": 6.811145510835913,
+      "reason": "10月營收創單月新高，併購Future Electronics後全球市佔率提升。"
+    },
+    {
+      "symbol": "3035",
+      "name": "智原",
+      "theme": "IP 矽智財",
+      "changePercent": 6.906906906906906,
+      "reason": "近期無明確個股消息，可能受IP矽智財族群輪動帶動。"
+    },
+    {
+      "symbol": "3702",
+      "name": "大聯大",
+      "theme": "電子通路",
+      "changePercent": 3.187250996015936,
+      "reason": "近期無明確個股消息，可能受電子通路族群輪動帶動。"
+    },
+    {
+      "symbol": "2890",
+      "name": "永豐金",
+      "theme": "金融",
+      "changePercent": 9.94550408719346,
+      "reason": "前三季獲利創同期新高，明年股利配發率上看七成且以現金為主。"
+    },
+    {
+      "symbol": "7765",
+      "name": "中華資安",
+      "theme": "資安",
+      "changePercent": 4.814814814814815,
+      "reason": "近期無明確個股消息，可能受族群輪動帶動。"
+    },
+    {
+      "symbol": "2376",
+      "name": "技嘉",
+      "theme": "AI 伺服器",
+      "changePercent": 9.881422924901186,
+      "reason": "近期無明確個股消息，可能受AI伺服器題材輪動帶動。"
+    }
+  ],
+  "marketBriefing": {
+    "highlights": "本日台股成交重點聚焦於AI相關族群與貨櫃航運。台積電受惠於CoWoS先進封裝題材，廣達、華碩、聯發科則受AI伺服器及AI PC題材帶動，成交金額顯著。貨櫃航運股長榮受惠於運價高檔及高殖利率預期，吸引資金買盤。整體市場資金流向顯示，投資人持續關注AI產業的發展潛力，以及具備穩定獲利和高殖利率的傳產股。",
+    "eventsPast": [
+      {
+        "title": "廣達AI伺服器營收看俏",
+        "detail": "廣達(2382)於11/11法說會表示，AI需求維持強勁，預期明年AI伺服器營收有望年增高雙位數百分比，且整體伺服器營收比重可達85至90%。"
+      },
+      {
+        "title": "力旺第三季獲利創新高",
+        "detail": "矽智財大廠力旺(3529)第三季歸屬母公司稅後淨利6.39億元，再創歷史新高，主要受惠於12吋晶圓權利金成長及PUF硬體安全IP需求暢旺。"
+      },
+      {
+        "title": "聯發科AI ASIC業務成長",
+        "detail": "聯發科(2454)AI ASIC業務從題材走向實質出貨，首款AI加速器已於9月開始小量出貨，公司預估第四季ASIC貢獻25億美元。"
+      },
+      {
+        "title": "長榮看好貨櫃航運景氣",
+        "detail": "長榮(2603)總經理吳光輝表示，依目前訂艙情況，第四季至明年農曆春節前貨載需求仍相當樂觀，看不到市場轉弱的理由。"
+      },
+      {
+        "title": "華碩推出AI Agent平台",
+        "detail": "華碩(2357)於11/24宣布推出智慧醫療影像醫學流程優化平台(ASUS MediConnect AI Agent Platform)，擴大佈局邊緣AI市場。"
+      }
+    ],
+    "eventsUpcoming": [
+      {
+        "date": "本週四",
+        "title": "GIS-KY雷射封裝產線小量生產",
+        "detail": "GIS-KY(6456)雷射封裝產線預計11月至12月啟動小量生產，完整產能將於明年第二季底至第三季初開出，有助於公司轉型。"
+      },
+      {
+        "date": "2027年Q2-Q3",
+        "title": "GIS-KY光通訊雷射封裝產能到位",
+        "detail": "GIS-KY(6456)預計2027年第二季底至第三季初，光通訊雷射封裝的完整產能將陸續開出，並有機會導入1-2家客戶量產。"
+      },
+      {
+        "date": "2027年",
+        "title": "聯詠與供應商協商2027年價格",
+        "detail": "聯詠(3034)因AI需求排擠晶圓與封測資源，推升下半年生產成本，已和供應商展開2027年價格協商，毛利率可能承壓。"
+      },
+      {
+        "date": "2027年",
+        "title": "華碩AI伺服器業務成長可期",
+        "detail": "華碩(2357)共同執行長胡書賓指出，2027年伺服器業務達成雙位數甚至高雙位數年成長相當有把握，內部更以挑戰三位數成長為企圖心。"
+      },
+      {
+        "date": "2027年",
+        "title": "力旺2奈米驗證與導入",
+        "detail": "力旺(3529)部分3奈米設計已導入量產，目標2027年完成2奈米驗證及初步導入。"
+      }
+    ]
+  }
+}
